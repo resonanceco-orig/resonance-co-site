@@ -97,8 +97,8 @@ img{ max-width:100%; display:block; }
 /* welcome (editorial) */
 .hm-welcome .inner{ max-width:1080px; margin:0 auto; padding:clamp(20px,3vw,40px) clamp(20px,5vw,40px);
   display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(30px,4vw,60px); align-items:center; }
-.hm-welcome .media{ aspect-ratio:4/3; background:var(--linen); display:flex; align-items:center; justify-content:center;
-  color:#8c8472; font-family:var(--sans); font-size:11px; letter-spacing:.18em; text-transform:uppercase; }
+.hm-welcome .media{ aspect-ratio:4/3; background:var(--linen); overflow:hidden; }
+.hm-welcome .media video{ width:100%; height:100%; object-fit:cover; display:block; }
 .hm-welcome .copy .eyebrow{ margin-bottom:1.2rem; }
 .hm-welcome .copy .dh{ margin-bottom:1.2rem; }
 .hm-welcome .copy .body{ font-weight:500; font-size:18px; line-height:1.85; color:#3a342d; max-width:34em; margin-bottom:1.7rem; }
@@ -123,9 +123,8 @@ img{ max-width:100%; display:block; }
 .hm-story .byline{ font-family:var(--serif); font-style:italic; font-size:15px; color:var(--muted); margin-top:10px; }
 .hm-story .text p{ font-weight:500; font-size:18px; line-height:1.85; margin-top:22px; color:#3a342d; }
 .hm-story .text p:first-of-type{ margin-top:30px; }
-.hm-story .photo{ position:sticky; top:24px; aspect-ratio:4/5; background:var(--linen);
-  display:flex; align-items:flex-end; justify-content:center; padding-bottom:16px; }
-.hm-story .photo span{ font-family:var(--sans); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#8c8472; }
+.hm-story .photo{ position:sticky; top:24px; aspect-ratio:4/5; background:var(--linen); overflow:hidden; }
+.hm-story .photo img{ width:100%; height:100%; object-fit:cover; object-position:50% 28%; display:block; }
 
 /* stay in touch (editorial form) */
 .hm-stay{ background:#EEEBE3; border-top:1px solid var(--linen); border-bottom:1px solid var(--linen); margin-top:clamp(28px,5vw,52px); }
@@ -166,7 +165,7 @@ img{ max-width:100%; display:block; }
 <div class="lace" aria-hidden="true"><svg viewBox="0 0 600 70" xmlns="http://www.w3.org/2000/svg" role="presentation"><g fill="none" stroke="#DDD4C2" stroke-width="1" stroke-linecap="round"><line x1="0" y1="60" x2="600" y2="60"/><path d="M 100 60 A 50 50 0 0 1 200 60"/><path d="M 150 60 A 50 50 0 0 1 250 60"/><path d="M 200 60 A 50 50 0 0 1 300 60"/><path d="M 250 60 A 50 50 0 0 1 350 60"/><path d="M 300 60 A 50 50 0 0 1 400 60"/><path d="M 350 60 A 50 50 0 0 1 450 60"/><path d="M 400 60 A 50 50 0 0 1 500 60"/></g></svg></div>
 <section class="hm-welcome">
   <div class="inner">
-    <div class="media">[ video: team load-in ]</div>
+    <div class="media"><video src="https://video.wixstatic.com/video/b3d9c0_38a95700c2ad4498aa4ceb6daaeb549b/1080p/mp4/file.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Resonance Co. setting up before launch"></video></div>
     <div class="copy">
       <p class="eyebrow">Welcome</p>
       <h2 class="dh">Welcome to Resonance Co.</h2>
@@ -206,7 +205,7 @@ img{ max-width:100%; display:block; }
     <p>Resonance Co. goes beyond templates and tips. Here, we provide insights grounded in research, translated into frameworks that give planners the language and steps to design powerful experiences with intention.</p>
     <p>If that&rsquo;s the kind of planner you are, or the kind you&rsquo;re becoming, you belong here. Welcome to Resonance Co.</p>
   </div>
-  <div class="photo"><span>[ portrait ]</span></div>
+  <div class="photo"><img src="https://static.wixstatic.com/media/b3d9c0_340434ef64cd42619ecb3d4a95506e10~mv2.jpg" alt="Rayven Crisafulli leaning against a table flanked by floral arrangements"></div>
 </section>
 <div class="lace" aria-hidden="true"><svg viewBox="0 0 600 70" xmlns="http://www.w3.org/2000/svg" role="presentation"><g fill="none" stroke="#DDD4C2" stroke-width="1" stroke-linecap="round"><line x1="0" y1="60" x2="600" y2="60"/><path d="M 100 60 A 50 50 0 0 1 200 60"/><path d="M 150 60 A 50 50 0 0 1 250 60"/><path d="M 200 60 A 50 50 0 0 1 300 60"/><path d="M 250 60 A 50 50 0 0 1 350 60"/><path d="M 300 60 A 50 50 0 0 1 400 60"/><path d="M 350 60 A 50 50 0 0 1 450 60"/><path d="M 400 60 A 50 50 0 0 1 500 60"/></g></svg></div>
 <section class="hm-stay" id="stay-in-touch">
