@@ -42,9 +42,9 @@ img{ max-width:100%; display:block; }
 /* ===== shared footer ===== */
 .site-footer{ margin-top:1rem; padding:clamp(40px,6vw,72px) 1.5rem clamp(30px,4vw,48px);
   text-align:center; border-top:1px solid var(--linen); }
-.site-footer .fwm{ font-size:clamp(22px,2.4vw,30px); font-weight:400; letter-spacing:.01em; display:inline-block; border-bottom:1px solid var(--charcoal); padding-bottom:8px; }
+.site-footer .fwm{ font-size:clamp(22px,2.4vw,30px); font-weight:400; letter-spacing:.01em; display:inline-block; border-bottom:1px solid var(--charcoal); padding-bottom:6px; }
 .site-footer .fwm span{ font-weight:300; }
-.site-footer .ftag{ font-style:italic; color:var(--muted); margin-top:6px; font-size:16px; font-weight:500; }
+.site-footer .ftag{ font-style:italic; color:var(--muted); margin-top:8px; font-size:16px; font-weight:500; }
 .site-footer .socials{ display:flex; gap:20px; justify-content:center; margin-top:20px; }
 .site-footer .socials a{ color:var(--muted); display:inline-flex; transition:color .2s; }
 .site-footer .socials a:hover{ color:var(--charcoal); }
@@ -119,11 +119,12 @@ img{ max-width:100%; display:block; }
 .hm-expect .head{ text-align:center; margin-bottom:clamp(40px,5vw,64px); }
 .hm-expect .head .l1{ display:block; font-family:var(--serif); font-size:clamp(22px,2.6vw,30px); font-weight:300; font-style:italic; }
 .hm-expect .head .l2{ display:block; font-family:var(--serif); font-size:clamp(40px,5.5vw,60px); font-weight:300; letter-spacing:.05em; text-transform:uppercase; line-height:1; }
-.hm-expect .grid{ display:grid; grid-template-columns:repeat(3,1fr); }
+.hm-expect .grid{ display:grid; grid-template-columns:1fr 1.28fr 1fr; }
 .hm-expect .col{ padding:clamp(12px,2vw,34px); border-left:1px solid var(--linen); display:flex; flex-direction:column; }
 .hm-expect .col:first-child{ border-left:none; }
-.hm-expect .col h3{ font-family:var(--serif); font-weight:300; font-size:clamp(22px,2.2vw,27px); line-height:1.18; text-align:center; }
-.hm-expect .col h3 .caps{ display:block; text-transform:uppercase; letter-spacing:.03em; }
+.hm-expect .col h3{ font-family:var(--serif); font-weight:300; line-height:1.1; text-align:center; }
+.hm-expect .col h3 .lead{ display:block; font-style:italic; font-weight:500; font-size:clamp(19px,1.8vw,22px); color:var(--muted); margin-bottom:.1em; }
+.hm-expect .col h3 .caps{ display:block; text-transform:uppercase; letter-spacing:.045em; font-size:clamp(25px,2.6vw,29px); line-height:1.02; }
 .hm-expect .col p{ font-weight:500; font-size:18px; line-height:1.85; color:var(--ink-2); margin-top:18px; }
 .hm-expect .col .page-link{ align-self:center; margin-top:22px; }
 
@@ -151,6 +152,11 @@ img{ max-width:100%; display:block; }
 .hm-stay input:focus{ outline:none; border-bottom-color:var(--charcoal); }
 .hm-stay .opt{ display:flex; align-items:flex-start; gap:12px; margin-top:14px; font-family:var(--serif); font-size:16px; color:var(--charcoal); cursor:pointer; }
 .hm-stay .opt input{ width:16px; height:16px; margin-top:5px; accent-color:var(--charcoal); flex-shrink:0; }
+.hm-stay textarea{ width:100%; background:transparent; border:1px solid var(--linen); color:var(--charcoal); font-family:var(--serif); font-size:18px; line-height:1.6; padding:12px 14px; min-height:120px; resize:vertical; }
+.hm-stay textarea::placeholder{ color:#a59b8c; }
+.hm-stay textarea:focus{ outline:none; border-color:var(--charcoal); }
+.hm-stay .msg-field{ display:none; }
+.hm-stay .msg-field.show{ display:block; }
 .hm-stay .send{ margin-top:32px; min-width:220px; background:var(--charcoal); color:var(--cream); border:none; font-family:var(--sans); font-weight:300; font-size:12px; letter-spacing:.2em; text-transform:uppercase; padding:16px 28px; cursor:pointer; transition:opacity .2s; }
 .hm-stay .send:hover{ opacity:.88; }
 
@@ -202,17 +208,17 @@ img{ max-width:100%; display:block; }
   <div class="head"><h2><span class="l1">What to</span><span class="l2">Expect</span></h2></div>
   <div class="grid">
     <div class="col">
-      <h3>Courses for <span class="caps">Event Planners</span></h3>
+      <h3><span class="lead">Courses for</span><span class="caps">Event Planners</span></h3>
       <p>Courses that turn the instinct experienced planners already have into method, built on the three-axis framework behind Resonance Co. The first ones are in development now.</p>
       <a class="page-link" href="#stay-in-touch">Hear when they launch &rarr;</a>
     </div>
     <div class="col">
-      <h3>Lectures &amp; Workshops for <span class="caps">Event Communities</span></h3>
+      <h3><span class="lead">Lectures &amp; workshops for</span><span class="caps">Event Communities</span></h3>
       <p>Educational programming that meets your members where they are. From keynotes to hands-on workshops, the content is grounded in research and delivered in a way practitioners can apply immediately.</p>
       <a class="page-link" href="for-event-communities.html">Topics &amp; more &rarr;</a>
     </div>
     <div class="col">
-      <h3>Consultations for the <span class="caps">Event Industry</span></h3>
+      <h3><span class="lead">Consultations for the</span><span class="caps">Event Industry</span></h3>
       <p>Whether you&rsquo;re planning your first event or building a venue from the ground up, we work with individuals and organizations to think through the strategy behind the experience.</p>
       <a class="page-link" href="#stay-in-touch">Start a conversation &rarr;</a>
     </div>
@@ -251,11 +257,27 @@ img{ max-width:100%; display:block; }
         <label class="opt"><input type="checkbox" name="interest[]" value="Book an education session"> Book an education session for my event community.</label>
         <label class="opt"><input type="checkbox" name="interest[]" value="Course launch notifications"> Receive an email when new courses are launched.</label>
       </div>
+      <div class="msg-field" id="msgField">
+        <label class="fld" for="smsg">Your Message</label>
+        <textarea id="smsg" name="message" rows="4" placeholder="Tell us a little about what you have in mind."></textarea>
+      </div>
       <button class="send" type="submit">Send</button>
     </form>
   </div>
 </section>
 
-<footer class="site-footer"><div class="fwm">RESONANCE <span>Co.</span></div><div class="ftag">Event Education &amp; Strategy</div><div class="socials"><a href="https://www.instagram.com/resonancecoevents" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@resonancecoevents" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2 1.6 3.5 3.5 3.8v2.4c-1.3 0-2.5-.4-3.5-1.1v6.4a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.5a3.1 3.1 0 1 0 2.2 3V3h2.6z"/></svg></a></div><div class="flegal">&copy; 2026 Resonance Co. Events. All rights reserved.</div></footer>
+<script>
+(function(){
+  var cb=document.querySelector('input[name="interest[]"][value="Send a message"]');
+  var mf=document.getElementById('msgField');
+  if(cb&&mf){
+    var sync=function(){ mf.classList.toggle('show', cb.checked); };
+    cb.addEventListener('change', sync);
+    sync();
+  }
+})();
+</script>
+
+<footer class="site-footer"><div class="fwm">RESONANCE <span>Co.</span></div><div class="ftag">Event Education &amp; Strategy</div><div class="socials"><a href="https://www.instagram.com/resonancecoevents" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@resonancecoevents" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2 1.6 3.5 3.5 3.8v2.4c-1.3 0-2.5-.4-3.5-1.1v6.4a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.5a3.1 3.1 0 1 0 2.2 3V3h2.6z"/></svg></a></div><div class="flegal">&copy; 2026 Resonance Co. All rights reserved.</div></footer>
 </body>
 </html>
