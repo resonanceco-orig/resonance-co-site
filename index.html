@@ -138,7 +138,7 @@ img{ max-width:100%; display:block; }
 .hm-story .portrait .cap a:hover{ color:var(--rose); border-color:var(--rose); }
 .hm-story .text .eyebrow{ margin-bottom:1rem; }
 .hm-story .text .dh{ margin-bottom:1.4rem; }
-.hm-story .text p{ font-weight:500; font-size:18px; line-height:1.85; color:var(--charcoal); margin-bottom:1.3rem; }
+.hm-story .text p:not(.eyebrow){ font-weight:500; font-size:18px; line-height:1.85; color:var(--charcoal); margin-bottom:1.3rem; }
 .hm-story .text .page-link{ margin-top:.5rem; }
 
 /* stay in touch (editorial form) */
@@ -161,7 +161,7 @@ img{ max-width:100%; display:block; }
 .hm-stay .send:hover{ opacity:.88; }
 
 @media (max-width:820px){
-  .hm-welcome .copy .body, .hm-expect .col p, .hm-story .text p{ font-size:17px; }
+  .hm-welcome .copy .body, .hm-expect .col p, .hm-story .text p:not(.eyebrow){ font-size:17px; }
   .hm-welcome .inner{ grid-template-columns:1fr; }
   .hm-welcome .media{ margin-top:.5rem; }
   .hm-welcome .copy h1{ font-size:clamp(30px,8vw,40px); }
