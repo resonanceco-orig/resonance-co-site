@@ -12,45 +12,8 @@
 <meta property="og:url" content="https://resonance-co.netlify.app/about.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 <style>
-
-:root{ --cream:#F4F3EF; --paper-2:#EEEBE3; --linen:#DDD4C2; --charcoal:#2A2520; --muted:#6B5F52; --rose:#B01050;
-  --ink-2:#4A4945; --muted-2:#5E5C55; --faint:#9E9484;
-  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif; }
-*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
-html{ scroll-behavior:smooth; }
-body{ background:var(--cream); color:var(--charcoal); font-family:var(--serif);
-  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
-img{ max-width:100%; display:block; }
-
-/* ===== shared site nav ===== */
-.site-nav{ max-width:none; margin:0; padding:clamp(22px,3vw,40px) clamp(24px,5vw,64px) 18px;
-  display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; flex-wrap:wrap; }
-.site-nav .brand{ text-decoration:none; color:var(--charcoal); line-height:1; display:flex; flex-direction:column; align-items:center; }
-.site-nav .brand .wm{ font-size:clamp(24px,2.6vw,32px); font-weight:400; letter-spacing:.01em;
-  border-bottom:1px solid var(--charcoal); padding-bottom:6px; display:inline-block; }
-.site-nav .brand .wm span{ font-weight:300; }
-.site-nav .brand em{ display:block; font-style:italic; font-size:clamp(14px,1.3vw,17px); font-weight:500;
-  margin-top:8px; color:var(--muted); }
-.site-nav .links{ display:flex; gap:clamp(22px,4vw,52px); padding-bottom:6px; }
-.site-nav .links a{ font-family:var(--sans); font-weight:300; font-size:12.5px; letter-spacing:.16em;
-  text-transform:uppercase; text-decoration:none; color:var(--charcoal); padding-bottom:8px;
-  border-bottom:1px solid transparent; transition:border-color .2s; }
-.site-nav .links a:hover{ border-color:var(--linen); }
-.site-nav .links a.active{ border-color:var(--charcoal); }
-
-/* ===== shared footer ===== */
-.site-footer{ margin-top:1rem; padding:clamp(40px,6vw,72px) 1.5rem clamp(30px,4vw,48px);
-  text-align:center; border-top:1px solid var(--linen); }
-.site-footer .fwm{ font-size:clamp(22px,2.4vw,30px); font-weight:400; letter-spacing:.01em; display:inline-block; border-bottom:1px solid var(--charcoal); padding-bottom:6px; }
-.site-footer .fwm span{ font-weight:300; }
-.site-footer .ftag{ font-style:italic; color:var(--muted); margin-top:8px; font-size:16px; font-weight:500; }
-.site-footer .socials{ display:flex; gap:20px; justify-content:center; margin-top:20px; }
-.site-footer .socials a{ color:var(--muted); display:inline-flex; transition:color .2s; }
-.site-footer .socials a:hover{ color:var(--charcoal); }
-.site-footer .socials svg{ width:21px; height:21px; }
-.site-footer .flegal{ font-family:var(--sans); font-weight:300; font-size:11px; letter-spacing:.12em;
-  text-transform:uppercase; color:var(--muted); margin-top:22px; }
 
 /* ===== shared tokens ===== */
 .eyebrow{ font-family:var(--sans); font-weight:300; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); }
@@ -213,7 +176,7 @@ img{ max-width:100%; display:block; }
 <section class="ab-story">
   <div class="portrait">
     <img src="assets/Ash-Simmons-Photography-Headshots-136.jpg" alt="Rayven Crisafulli, founder of Resonance Co.">
-    <p class="cap">Rayven Crisafulli, PhD, CMP, CMP-HC<br>Founder, Resonance Co.<span class="credit">Portrait &middot; Ash Simmons</span></p>
+    <p class="cap">Rayven Crisafulli, PhD, CMP<br>Founder, Resonance Co.<span class="credit">Portrait &middot; Ash Simmons</span></p>
   </div>
   <div class="text">
     <p class="eyebrow">From the Founder</p>
@@ -260,7 +223,7 @@ img{ max-width:100%; display:block; }
   <div class="ab-press-grid">
 
     <a class="ab-press" href="https://www.nbcmiami.com/video/nbc-6-news/more-and-more-couples-are-opting-for-micro-weddings-heres-why/3706475/" target="_blank" rel="noopener">
-      <div class="thumb"><img src="assets/press-nbc6-microweddings.png" alt="NBC 6 Miami segment on micro weddings — soft cream and dusty-rose floral arrangement in natural light"><span class="ab-play" aria-hidden="true"><span></span></span></div>
+      <div class="thumb"><img src="assets/press-nbc6-microweddings.jpg" alt="NBC 6 Miami segment on micro weddings — soft cream and dusty-rose floral arrangement in natural light"><span class="ab-play" aria-hidden="true"><span></span></span></div>
       <div class="body">
         <div class="src">NBC 6 Miami &middot; Oct 2025</div>
         <h3>Why more couples are choosing micro weddings</h3>
@@ -269,7 +232,7 @@ img{ max-width:100%; display:block; }
     </a>
 
     <a class="ab-press" href="https://www.fox35orlando.com/video/1708424" target="_blank" rel="noopener">
-      <div class="thumb"><img src="assets/press-fox35-microweddings.png" alt="FOX 35 Good Day Orlando segment, inside the micro wedding trend — Rayven Crisafulli interviewed live"><span class="ab-play" aria-hidden="true"><span></span></span></div>
+      <div class="thumb"><img src="assets/press-fox35-microweddings.jpg" alt="FOX 35 Good Day Orlando segment, inside the micro wedding trend — Rayven Crisafulli interviewed live"><span class="ab-play" aria-hidden="true"><span></span></span></div>
       <div class="body">
         <div class="src">FOX 35 Orlando &middot; Sep 2025</div>
         <h3>The micro-wedding trend, explained</h3>
@@ -278,7 +241,7 @@ img{ max-width:100%; display:block; }
     </a>
 
     <a class="ab-press" href="https://www.news4jax.com/video/news/morning-show/2025/09/16/pandemic-s-micro-wedding-trend-isn-t-going-away-anytime-soon/" target="_blank" rel="noopener">
-      <div class="thumb"><img src="assets/press-news4jax-microweddings.png" alt="News4Jax WJXT segment on the micro wedding trend — hands styling a floral cake surrounded by garden roses"><span class="ab-play" aria-hidden="true"><span></span></span></div>
+      <div class="thumb"><img src="assets/press-news4jax-microweddings.jpg" alt="News4Jax WJXT segment on the micro wedding trend — hands styling a floral cake surrounded by garden roses"><span class="ab-play" aria-hidden="true"><span></span></span></div>
       <div class="body">
         <div class="src">News4Jax &middot; Sep 2025</div>
         <h3>The micro-wedding trend isn&rsquo;t going away</h3>
@@ -302,7 +265,7 @@ img{ max-width:100%; display:block; }
   <div class="ab-subbeat gap"><span class="sb-label">In Print</span><span class="sb-desc">The practitioner&rsquo;s long-form companion to the class.</span></div>
 
   <div class="ab-print">
-    <img class="cover" src="assets/textbook-cover.png" alt="Event Planning &amp; Management, Second Edition, by Rayven Crisafulli, PhD, CMP — cream linen hardcover with a debossed venue floor-plan motif">
+    <img class="cover" src="assets/Crisafulli-Event-Planning-Management-textbook-cover.jpg" alt="Event Planning &amp; Management, Second Edition, by Rayven Crisafulli, PhD, CMP — cream linen hardcover with a debossed venue floor-plan motif">
     <div>
       <h2 class="dh">Event Planning &amp; Management: <em>Business Strategies for Creating Exceptional Experiences</em></h2>
       <p class="body">The textbook is the long-form version of the undergraduate class, the practitioner&rsquo;s view: the strategy behind the experience, the operational reality textbooks often skip, and the insights that usually arrive only after a few hundred events. For students and working planners who want the business of events taken as seriously as the design of them.</p>

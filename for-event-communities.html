@@ -9,70 +9,11 @@
 <meta property="og:title" content="Speaking &amp; Workshops &middot; Resonance Co.">
 <meta property="og:description" content="Event design is both art and science. The medium and the measurement is resonance. Keynotes, workshops, and guest sessions for the rooms your community already gathers in.">
 <meta property="og:image" content="https://resonance-co.netlify.app/assets/crane-cottage-courtyard.jpg">
-<meta property="og:url" content="https://resonance-co.netlify.app/for-event-communities">
+<meta property="og:url" content="https://resonance-co.netlify.app/for-event-communities.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 <style>
-
-:root{ --cream:#F4F3EF; --linen:#DDD4C2; --charcoal:#2A2520; --muted:#6B5F52; --rose:#B01050;
-  --ink-2:#4A4945; --muted-2:#5E5C55; --faint:#9E9484;
-  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif; }
-*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
-html{ scroll-behavior:smooth; }
-body{ background:var(--cream); color:var(--charcoal); font-family:var(--serif);
-  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
-img{ max-width:100%; display:block; }
-
-/* ===== shared site nav ===== */
-.site-nav{ max-width:none; margin:0; padding:clamp(22px,3vw,40px) clamp(24px,5vw,64px) 18px;
-  display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; flex-wrap:wrap; }
-.site-nav .brand{ text-decoration:none; color:var(--charcoal); line-height:1; display:flex; flex-direction:column; align-items:center; }
-.site-nav .brand .wm{ font-size:clamp(24px,2.6vw,32px); font-weight:400; letter-spacing:.01em;
-  border-bottom:1px solid var(--charcoal); padding-bottom:6px; display:inline-block; }
-.site-nav .brand .wm span{ font-weight:300; }
-.site-nav .brand em{ display:block; font-style:italic; font-size:clamp(14px,1.3vw,17px); font-weight:500;
-  margin-top:8px; color:var(--muted); }
-.site-nav .links{ display:flex; gap:clamp(22px,4vw,52px); padding-bottom:6px; }
-.site-nav .links a{ font-family:var(--sans); font-weight:300; font-size:12.5px; letter-spacing:.16em;
-  text-transform:uppercase; text-decoration:none; color:var(--charcoal); padding-bottom:8px;
-  border-bottom:1px solid transparent; transition:border-color .2s; }
-.site-nav .links a:hover{ border-color:var(--linen); }
-.site-nav .links a.active{ border-color:var(--charcoal); }
-
-/* ===== shared footer ===== */
-.site-footer{ margin-top:1rem; padding:clamp(40px,6vw,72px) 1.5rem clamp(30px,4vw,48px);
-  text-align:center; border-top:1px solid var(--linen); }
-.site-footer .fwm{ font-size:clamp(22px,2.4vw,30px); font-weight:400; letter-spacing:.01em; display:inline-block; border-bottom:1px solid var(--charcoal); padding-bottom:8px; }
-.site-footer .fwm span{ font-weight:300; }
-.site-footer .ftag{ font-style:italic; color:var(--muted); margin-top:6px; font-size:16px; font-weight:500; }
-.site-footer .socials{ display:flex; gap:20px; justify-content:center; margin-top:20px; }
-.site-footer .socials a{ color:var(--muted); display:inline-flex; transition:color .2s; }
-.site-footer .socials a:hover{ color:var(--charcoal); }
-.site-footer .socials svg{ width:21px; height:21px; }
-.site-footer .flegal{ font-family:var(--sans); font-weight:300; font-size:11px; letter-spacing:.12em;
-  text-transform:uppercase; color:var(--muted); margin-top:22px; }
-
-/* ===== home ===== */
-.home-hero{ max-width:1080px; margin:0 auto; padding:clamp(48px,9vw,120px) clamp(20px,5vw,40px) clamp(36px,6vw,72px); }
-.home-hero .eyebrow{ font-family:var(--sans); font-weight:300; font-size:12.5px; letter-spacing:.3em;
-  text-transform:uppercase; color:var(--muted); margin-bottom:clamp(22px,3vw,34px); }
-.home-hero h1{ font-weight:300; font-size:clamp(34px,5.2vw,68px); line-height:1.12; letter-spacing:-.006em;
-  max-width:16em; }
-.home-hero h1 .signal{ color:var(--rose); }
-.home-hero p.lede{ font-weight:500; font-size:clamp(17px,1.4vw,20px); line-height:1.85; max-width:34em;
-  margin-top:clamp(24px,3vw,34px); color:#3a342d; }
-.home-cards{ max-width:1080px; margin:0 auto clamp(40px,7vw,90px); padding:0 clamp(20px,5vw,40px);
-  display:grid; grid-template-columns:1fr 1fr; gap:clamp(20px,3vw,40px); }
-.home-cards a{ text-decoration:none; color:var(--charcoal); border:1px solid var(--linen);
-  padding:clamp(26px,3vw,40px); transition:border-color .25s, transform .25s; display:block; }
-.home-cards a:hover{ border-color:var(--charcoal); transform:translateY(-2px); }
-.home-cards .k{ font-family:var(--sans); font-weight:300; font-size:11.5px; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--muted); }
-.home-cards h2{ font-weight:300; font-size:clamp(26px,2.8vw,38px); line-height:1.1; margin:14px 0 12px; }
-.home-cards p{ font-weight:500; font-size:16px; line-height:1.8; color:var(--ink-2); }
-.home-cards .go{ font-family:var(--serif); font-style:italic; font-size:17px; margin-top:16px;
-  display:inline-block; border-bottom:1px solid var(--linen); }
-@media (max-width:760px){ .home-cards{ grid-template-columns:1fr; } }
 
 /* ===== contact CTA (page close) ===== */
 .contact-cta{ max-width:760px; margin:0 auto; padding:clamp(54px,8vw,104px) clamp(20px,5vw,40px); text-align:center; border-top:1px solid var(--linen); }
@@ -258,9 +199,9 @@ img{ max-width:100%; display:block; }
 .s-formats .section-head { margin-bottom: 5rem; text-align: center; }
 .s-formats .section-head .line1 { display: block; font-size: clamp(22px, 2.8vw, 32px); font-weight: 300; font-style: italic; letter-spacing: 0.01em; line-height: 1.1; }
 .s-formats .section-head .line2 { display: block; font-size: clamp(38px, 5vw, 58px); font-weight: 300; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1; }
-.s-formats .format-row { display: grid; grid-template-columns: 300px 1fr; gap: 3rem; padding: 3rem 0; border-bottom: 0.5px solid #C8C5BC; align-items: start; }
-.s-formats .format-row:first-child { border-top: 0.5px solid #C8C5BC; }
-.s-formats .format-left { padding-right: 2.5rem; border-right: 0.5px solid #C8C5BC; }
+.s-formats .format-row { display: grid; grid-template-columns: 300px 1fr; gap: 3rem; padding: 3rem 0; border-bottom: 0.5px solid var(--linen); align-items: start; }
+.s-formats .format-row:first-child { border-top: 0.5px solid var(--linen); }
+.s-formats .format-left { padding-right: 2.5rem; border-right: 0.5px solid var(--linen); }
 .s-formats .format-name { font-size: clamp(26px, 2.8vw, 34px); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; color: #2A2520; margin-bottom: 0.5rem; }
 .s-formats .format-name .caps { display: block; font-size: clamp(30px, 3.4vw, 40px); letter-spacing: 0.04em; text-transform: uppercase; line-height: 1; }
 .s-formats .format-duration { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted-2); font-weight: 400; margin-top: 0.75rem; }
@@ -272,7 +213,7 @@ img{ max-width:100%; display:block; }
 @media (max-width: 700px) {
 .s-formats .wrap { padding: 3rem 1.25rem 4rem; }
 .s-formats .format-row { grid-template-columns: 1fr; gap: 1rem; }
-.s-formats .format-left { border-right: none; padding-right: 0; border-bottom: 0.5px solid #C8C5BC; padding-bottom: 1rem; }
+.s-formats .format-left { border-right: none; padding-right: 0; border-bottom: 0.5px solid var(--linen); padding-bottom: 1rem; }
 .s-formats .format-name { font-size: 28px; }
 .s-formats .format-name .caps { font-size: 34px; }
 .s-formats .format-desc { font-size: 17px; }
@@ -308,15 +249,15 @@ img{ max-width:100%; display:block; }
 .s-topics .index-tile .n { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.15em; color: var(--muted-2); margin-bottom: 7px; }
 .s-topics .index-tile .t { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 300; line-height: 1.35; color: #2A2520; margin-bottom: 8px; transition: color 0.2s ease, font-weight 0.2s ease; }
 .s-topics .index-tile:hover a .t { font-weight: 400; }
-.s-topics .index-tile.t-01:hover { box-shadow: inset 3px 0 0 #B01050; }
+.s-topics .index-tile.t-01:hover { box-shadow: inset 3px 0 0 #2A2520; }
 .s-topics .index-tile.t-02:hover { box-shadow: inset 3px 0 0 #5570A0; }
 .s-topics .index-tile.t-03:hover { box-shadow: inset 3px 0 0 #D4922A; }
-.s-topics .index-tile.t-04:hover { box-shadow: inset 3px 0 0 #B01050; }
-.s-topics .index-tile.t-05:hover { box-shadow: inset 3px 0 0 #B01050; }
+.s-topics .index-tile.t-04:hover { box-shadow: inset 3px 0 0 #0D1B2A; }
+.s-topics .index-tile.t-05:hover { box-shadow: inset 3px 0 0 #0D1B2A; }
 .s-topics .index-tile.t-06:hover { box-shadow: inset 3px 0 0 #6E7E28; }
 .s-topics .index-tile.t-07:hover { box-shadow: inset 3px 0 0 #D4922A; }
 .s-topics .index-tile .f { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.08em; color: var(--muted-2); line-height: 1.5; }
-.s-topics .featured { border-left: 3px solid #B01050; border-right: 0.5px solid #DDD4C2; padding: 2.5rem 2.25rem 2.5rem 2.75rem; background: transparent; margin-bottom: 4rem; }
+.s-topics .featured { border-left: 3px solid #2A2520; border-right: 0.5px solid #DDD4C2; padding: 2.5rem 2.25rem 2.5rem 2.75rem; background: transparent; margin-bottom: 4rem; }
 .s-topics .featured .feat-eye { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted-2); font-weight: 400; margin-bottom: 14px; }
 .s-topics .featured h3 { font-size: clamp(34px, 4vw, 50px); font-weight: 300; line-height: 1; letter-spacing: -0.01em; margin-bottom: 0.6rem; }
 .s-topics .featured .avail { font-family: 'Jost', sans-serif; font-size: 13px; color: var(--muted-2); letter-spacing: 0.03em; margin-bottom: 1.25rem; }
@@ -511,8 +452,8 @@ img{ max-width:100%; display:block; }
   <div class="topic-list">
     <div class="topic" id="topic-02" style="border-left:3px solid #5570A0; padding-left:1.25rem;"><div class="topic-num">02</div><div class="topic-body"><h3>The Science Behind<br>the Event Experience</h3><div class="avail">Available as keynote or workshop</div><p>Everyone in events talks about "experience." Far fewer can say what actually makes one. Drawing on experience economy theory and the research on what attendees genuinely feel in a room, this session gives planners a shared vocabulary for what their events are designed to do, and a clear way to evaluate whether they're doing it. No prior theory background required; appropriate for planners and venue professionals at any stage.</p><div class="cmp"><span>Meeting &amp; Event Design</span><span>Strategic Planning</span></div></div></div>
     <div class="topic" id="topic-03" style="border-left:3px solid #D4922A; padding-left:1.25rem;"><div class="topic-num">03</div><div class="topic-body"><h3>Grounded by Design:<br>The Case Against Elevation</h3><div class="avail">Available as keynote or workshop</div><p>The event industry has spent a decade chasing "elevated." It's producing beautiful, interchangeable events that no one remembers. This session makes the case that the pursuit of elevation often works against resonance: when design prioritizes aesthetic sophistication over authentic identity, it creates events that impress but don't move. Attendees leave with a framework for distinguishing design that performs for an audience from design that speaks to one, and a practical vocabulary for redirecting clients away from trend-driven briefs toward identity-grounded ones.</p><div class="cmp"><span>Meeting &amp; Event Design</span><span>Stakeholder Management</span></div></div></div>
-    <div class="topic" id="topic-04" style="border-left:3px solid #B01050; padding-left:1.25rem;"><div class="topic-num">04</div><div class="topic-body"><h3>Building a Brand That Resonates</h3><div class="avail">Available as keynote or workshop</div><p>Draws on original doctoral research to distinguish between event brand authenticity (does this event do what it claims to do?) and event culture authenticity (does this event genuinely belong to the community it serves?). Practical frameworks for how brand decisions, from visual identity to messaging to programming choices, either build or erode the audience trust that drives repeat attendance and word-of-mouth. Relevant for event planners, wedding professionals, and venue owners building or repositioning a brand in a crowded market.</p><div class="cmp"><span>Marketing</span><span>Strategic Planning</span></div></div></div>
-    <div class="topic" id="topic-05" style="border-left:3px solid #B01050; padding-left:1.25rem;"><div class="topic-num">05</div><div class="topic-body"><h3>Conveying Authenticity in<br>Event Brand Marketing</h3><div class="avail">Available as workshop or half-day intensive</div><p>Audiences have become sophisticated at detecting performative authenticity in marketing. They're opting out of it. This session draws on event brand authenticity research to help event professionals write brand copy, social content, and marketing materials that communicate genuine value without tipping into the language patterns audiences have learned to distrust. Practical, and immediately applicable.</p><div class="cmp"><span>Marketing</span><span>Communications</span></div></div></div>
+    <div class="topic" id="topic-04" style="border-left:3px solid #0D1B2A; padding-left:1.25rem;"><div class="topic-num">04</div><div class="topic-body"><h3>Building a Brand That Resonates</h3><div class="avail">Available as keynote or workshop</div><p>Draws on original doctoral research to distinguish between event brand authenticity (does this event do what it claims to do?) and event culture authenticity (does this event genuinely belong to the community it serves?). Practical frameworks for how brand decisions, from visual identity to messaging to programming choices, either build or erode the audience trust that drives repeat attendance and word-of-mouth. Relevant for event planners, wedding professionals, and venue owners building or repositioning a brand in a crowded market.</p><div class="cmp"><span>Marketing</span><span>Strategic Planning</span></div></div></div>
+    <div class="topic" id="topic-05" style="border-left:3px solid #0D1B2A; padding-left:1.25rem;"><div class="topic-num">05</div><div class="topic-body"><h3>Conveying Authenticity in<br>Event Brand Marketing</h3><div class="avail">Available as workshop or half-day intensive</div><p>Audiences have become sophisticated at detecting performative authenticity in marketing. They're opting out of it. This session draws on event brand authenticity research to help event professionals write brand copy, social content, and marketing materials that communicate genuine value without tipping into the language patterns audiences have learned to distrust. Practical, and immediately applicable.</p><div class="cmp"><span>Marketing</span><span>Communications</span></div></div></div>
     <div class="topic" id="topic-06" style="border-left:3px solid #6E7E28; padding-left:1.25rem;"><div class="topic-num">06</div><div class="topic-body"><h3>Rooted: Designing with<br>Destination Heritage</h3><div class="avail">Available as keynote, workshop, or half-day intensive</div><p>The most memorable events don't just happen somewhere. They belong somewhere. This session teaches wedding planners and venue professionals how to read the cultural heritage, history, and identity of a host destination and weave it into event design in ways that feel specific, meaningful, and impossible to replicate. Includes frameworks for heritage research, design translation, and client communication. Particularly relevant for destination wedding planners, venue-based experiences, and events with strong regional or cultural identity.</p><div class="cmp"><span>Meeting &amp; Event Design</span><span>Site Management</span></div></div></div>
     <div class="topic" id="topic-07" style="border-left:3px solid #D4922A; padding-left:1.25rem;"><div class="topic-num">07</div><div class="topic-body"><h3>Event Planners as Cultural Curators:<br>The Anthropology of Planned Events</h3><div class="avail">Available as keynote</div><p>Event planners have always done something anthropologists would recognize. They design the rituals, symbols, and shared experiences through which communities mark time and make meaning. This session traces the unbroken line from the earliest human gatherings to the events on your calendar right now, revealing how ancient patterns of ritual, celebration, and communal gathering still shape what works in modern event design. Attendees leave with a deeper understanding of why their instincts are right, a vocabulary for the cultural forces operating in every event they plan, and a new way of seeing themselves in their work.</p><div class="cmp"><span>Meeting &amp; Event Design</span><span>Strategic Planning</span></div></div></div>
   </div>
