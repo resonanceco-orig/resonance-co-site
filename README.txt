@@ -1,7 +1,11 @@
 RESONANCE CO. — static site (Netlify). Drag this whole folder onto Netlify to publish.
 
 Pages: index.html (Home) · about.html (About) · for-event-communities.html (Speaking).
-Home unpacked from the single-file bundle: fonts in assets/fonts/, scripts in assets/js/, photos in assets/.
+Home is fully static HTML (pre-rendered July 2026): all text is crawlable, animations are CSS
+plus a small inline script. Fonts self-hosted in assets/fonts/.
+SEO layer: sitemap.xml, robots.txt, 404.html, assets/favicon.svg, canonical tags, and JSON-LD
+structured data (Organization + Person on Home, Person + Book on About, Service on Speaking).
+Canonical domain: https://resonanceco.co (set as primary domain in Netlify).
 about.html and for-event-communities.html share assets/site.css (tokens, nav, footer); their page-specific CSS stays inline.
 Stay in Touch form is wired for Netlify Forms (form name "stay-in-touch").
 Footer Instagram/TikTok links point to the live @resonancecoevents profiles.
@@ -21,4 +25,4 @@ Changelog (July 2026 cleanup):
 Outstanding (decisions for Rayven):
 - "View the textbook" button on About stays hidden until the 2nd Edition publishes (Fall 2026).
 - Hidden "On TikTok" block on About awaits the three pinned videos.
-- No favicon / 404 / sitemap yet; bundle with the /speak page work.
+- When /speak ships: add noindex to it, and add nothing to sitemap.xml (it stays unlisted).

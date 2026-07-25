@@ -1,990 +1,331 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="en">
+<head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Resonance Co. &middot; Event Education &amp; Strategy</title>
 <meta name="description" content="Event design education, grounded in research on what makes events resonate. Courses, lectures, and consulting for planners who treat the work as craft. Founded by Rayven Crisafulli, PhD, CMP.">
+<link rel="canonical" href="https://resonanceco.co/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Resonance Co. &middot; Event Education &amp; Strategy">
 <meta property="og:description" content="Event design education, grounded in research on what makes events resonate. For planners who treat the work as craft.">
-<meta property="og:image" content="https://resonance-co.netlify.app/assets/Ash-Simmons-Photography-Headshots-136.jpg">
-<meta property="og:url" content="https://resonance-co.netlify.app/index.html">
+<meta property="og:image" content="https://resonanceco.co/assets/Ash-Simmons-Photography-Headshots-136.jpg">
+<meta property="og:url" content="https://resonanceco.co/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="assets/js/dc-support.js"></script>
-</head>
-<body>
-
-<x-dc>
-<helmet>
-<style>/* ============================================================
-   Fonts — Resonance Co. (self-hosted)
-   Two families, served locally from assets/fonts/ so the system
-   works offline and ships the real binaries to consumers.
-   - Cormorant Garamond (serif) — VARIABLE: one file covers the
-     full 300–700 weight range, upright + italic. Display + body.
-   - Jost (sans) — VARIABLE: one file covers the full weight range,
-     upright + italic. Eyebrows, labels, nav, legal — used at 300
-     (light), 400, and 500 (medium).
-   ============================================================ */
-
-/* ---- Cormorant Garamond (variable) ---- */
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("assets/fonts/CormorantGaramond-Variable.ttf") format("truetype");
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("assets/fonts/CormorantGaramond-Italic-Variable.ttf") format("truetype");
-  font-weight: 300 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* ---- Jost (variable) ---- */
-@font-face {
-  font-family: "Jost";
-  src: url("assets/fonts/Jost-Variable.ttf") format("truetype");
-  font-weight: 300 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Jost";
-  src: url("assets/fonts/Jost-Italic-Variable.ttf") format("truetype");
-  font-weight: 300 500;
-  font-style: italic;
-  font-display: swap;
-}
-</style>
-<style>/* ============================================================
-   Colors — Resonance Co.
-   A warm, paper-and-ink editorial palette: two papers (cream +
-   recessed paper-2), one linen hairline, and ONE warm four-step
-   ink ramp (charcoal → ink-2 → muted → faint). A single rose
-   "signal" accent (one word / one rule per page) and warm course/
-   topic accents used only as 3px markers. Everything is warm: no
-   cool greys, no cool ground. The optional dark slide variant uses
-   warm charcoal with cream/linen chrome; navy survives only as a
-   deep course-content accent, never as a ground.
-   ============================================================ */
-:root {
-  /* ---- Surfaces (warm beige) ---- */
-  --cream:    #F4F3EF;  /* page / canvas */
-  --paper-2:  #EEEBE3;  /* recessed band (e.g. Stay in Touch) */
-  --linen:    #DDD4C2;  /* hairlines, ghost architecture, secondary rules */
-
-  /* ---- Ink — one warm four-step ramp, dark → light ---- */
-  --charcoal: #2A2520;  /* primary ink / dark surface */
-  --ink-2:    #4A4945;  /* secondary body (sublines, blurbs) */
-  --muted:    #6B5F52;  /* captions, labels, eyebrows */
-  --faint:    #9E9484;  /* large numerals, placeholders, faintest chrome */
-
-  /* ---- Signal accent (one word / one rule per page) ---- */
-  --rose:  #B01050;
-
-  /* ---- Course / topic accents (3px markers only, never fills) ---- */
-  --accent-amber:  #D4922A;  /* Course 01 · Designing for Identity */
-  --accent-blue:   #5570A0;  /* Course 02 · Experience Architecture ("faded ink") */
-  --accent-forest: #325E42;  /* Course 03 · Flow State & Narrative Engineering */
-  --accent-olive:  #6E7E28;  /* topic-marker variant (e.g. destination heritage) */
-  --accent-navy:   #0D1B2A;  /* deep navy — course-content accent (markers / rules / headers), NOT a background */
-
-  /* ============================================================
-     Semantic aliases — prefer these in components
-     ============================================================ */
-  --surface-page:  var(--cream);
-  --surface-sunk:  var(--paper-2);
-  --surface-ink:   var(--charcoal);   /* dark buttons / inversions */
-  --surface-dark:  var(--charcoal);   /* dark social-slide variant ground (warm charcoal, never navy) */
-  --on-ink:        var(--cream);      /* text on charcoal */
-
-  --text-strong:    var(--charcoal);
-  --text-body:      var(--charcoal);
-  --text-secondary: var(--ink-2);
-  --text-muted:     var(--muted);
-  --text-faint:     var(--faint);
-  --text-signal:    var(--rose);
-
-  --border-hairline: var(--linen);
-  --border-strong:   var(--charcoal);
-
-  --field-line:        var(--linen);
-  --field-line-focus:  var(--charcoal);
-  --field-placeholder: var(--faint);
-
-  --marker-primary: var(--rose);
-  --marker-blue:    var(--accent-blue);
-  --marker-amber:   var(--accent-amber);
-  --marker-forest:  var(--accent-forest);
-  --marker-olive:   var(--accent-olive);
-  --marker-navy:    var(--accent-navy);
-
-  /* ---- Course axis colors (Rosa's three resonance axes) ---- */
-  --course-01-identity:   var(--accent-amber);   /* Designing for Identity */
-  --course-02-experience: var(--accent-blue);    /* Experience Architecture */
-  --course-03-flow:       var(--accent-forest);  /* Flow State & Narrative Engineering */
-
-  /* ============================================================
-     Social-slide chrome on CREAM — aliases of the warm ink ramp.
-     A two-level hierarchy: muted for the prominent cover wordmark,
-     faint for all quiet interior chrome.
-     ============================================================ */
-  --slide-ink:          var(--muted);  /* cover wordmark / citation */
-  --slide-chrome:       var(--faint);  /* interior masthead */
-  --slide-chrome-soft:  var(--faint);  /* kicker / attribution / axis labels */
-  --slide-chrome-faint: var(--faint);  /* page number / handle */
-
-  /* ============================================================
-     Social-slide chrome on the CHARCOAL dark variant — warm light
-     tints (cream → linen → faint). No cool greys, no brown (muddy
-     on dark). The dark slide ground is warm charcoal, never navy.
-     ============================================================ */
-  --slide-ink-dk:          var(--cream);  /* headline / wordmark on charcoal */
-  --slide-chrome-dk:       var(--linen);  /* kicker on charcoal */
-  --slide-chrome-dk-soft:  var(--faint);  /* interior masthead on charcoal */
-  --slide-chrome-dk-faint: var(--faint);  /* page number / handle on charcoal */
-}
-</style>
-<style>/* ============================================================
-   Typography — Resonance Co.
-   Serif (Cormorant Garamond) carries display + body in a light
-   key (300/400/500). Sans (Jost) is reserved for eyebrows,
-   labels, nav and legal — always uppercase, widely tracked,
-   light weight. Headings run light and large; italics + the
-   rose accent supply emphasis.
-   ============================================================ */
-:root {
-  /* ---- Families ---- */
-  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif; /* @kind font */
-  --font-sans:  "Jost", system-ui, -apple-system, Segoe UI, sans-serif;  /* @kind font */
-
-  /* ---- Weights ---- */
-  --w-light:    300;  /* @kind font */
-  --w-regular:  400;  /* @kind font */
-  --w-medium:   500;  /* @kind font */
-  --w-semi:     600;  /* @kind font */
-
-  /* ---- Display & heading sizes (fluid) ---- */
-  --fs-mast:    clamp(34px, 5.2vw, 62px);  /* @kind font */
-  --fs-display: clamp(30px, 4.2vw, 50px);  /* @kind font */
-  --fs-h1:      clamp(30px, 4vw, 46px);    /* @kind font */
-  --fs-h2:      clamp(26px, 2.8vw, 38px);  /* @kind font */
-  --fs-h3:      clamp(22px, 2.5vw, 30px);  /* @kind font */
-
-  /* ---- Section-head pair (the speaking-page system) ---- */
-  --fs-head-line1: clamp(22px, 2.8vw, 32px);  /* @kind font */
-  --fs-head-line2: clamp(38px, 5vw, 58px);    /* @kind font */
-
-  /* ---- Body & supporting ---- */
-  --fs-lede:    clamp(17px, 1.4vw, 20px);  /* @kind font */
-  --fs-hero-sub:clamp(16px, 1.35vw, 19px);/* @kind font */  /* hero subline (a touch smaller than lede) */
-  --fs-body:    18px;  /* @kind font */
-  --fs-body-sm: 16px;  /* @kind font */
-  --fs-caption: 11px;  /* @kind font */
-
-  /* ---- Eyebrow / label (Jost) ---- */
-  --fs-eyebrow: 11px;    /* @kind font */
-  --fs-label:   12px;    /* @kind font */
-  --fs-nav:     12.5px;  /* @kind font */
-
-  /* ---- Line heights ---- */
-  --lh-tight:   1.05;  /* @kind font */
-  --lh-display: 1.14;  /* @kind font */
-  --lh-body:    1.85;  /* @kind font */
-  --lh-snug:    1.5;   /* @kind font */
-
-  /* ---- Tracking ---- */
-  --ls-tight:   -0.006em;  /* @kind font */
-  --ls-nav:     0.16em;    /* @kind font */
-  --ls-eyebrow: 0.22em;    /* @kind font */
-  --ls-wide:    0.3em;     /* @kind font */
-  --ls-caps:    0.05em;    /* @kind font */
-
-  /* ============================================================
-     Brand lockup — DESIGN-SPECIFIC sizing (NOT type roles).
-     These size the “RESONANCE Co.” wordmark for the logo lockup.
-     Do NOT reuse them as heading/body sizes, and don't “fix” them
-     to match a heading token — they're tuned to the mark itself.
-     ============================================================ */
-  --fs-wordmark:        clamp(24px, 2.6vw, 32px);  /* @kind font */  /* nav wordmark */
-  --fs-wordmark-sub:    clamp(14px, 1.3vw, 17px);  /* @kind font */  /* nav tagline */
-  --fs-wordmark-footer: clamp(22px, 2.4vw, 30px);  /* @kind font */  /* footer wordmark */
-
-  /* ============================================================
-     Semantic role aliases
-     ============================================================ */
-  --text-display-font:  var(--font-serif);  /* @kind font */
-  --text-body-font:     var(--font-serif);  /* @kind font */
-  --text-label-font:    var(--font-sans);   /* @kind font */
-}
-</style>
-<style>/* ============================================================
-   Spacing & layout — Resonance Co.
-   The site is built on generous editorial whitespace and a few
-   fixed measures: a ~1080px reading column, fluid section
-   padding, and a baseline rhythm tuned for serif body copy.
-   ============================================================ */
-:root {
-  /* ---- Spacing scale (px) ---- */
-  --space-1:  4px;
-  --space-2:  8px;
-  --space-3:  12px;
-  --space-4:  16px;
-  --space-5:  24px;
-  --space-6:  32px;
-  --space-7:  40px;
-  --space-8:  56px;
-  --space-9:  72px;
-  --space-10: 104px;
-
-  /* ---- Fluid section rhythm ---- */
-  --pad-section-y: clamp(48px, 7vw, 104px);
-  --pad-section-x: clamp(20px, 5vw, 48px);
-  --gap-spread:    clamp(2.5rem, 5vw, 5rem);   /* two-column editorial gap */
-
-  /* ---- Measures ---- */
-  --measure-page:  1080px;   /* main reading column */
-  --measure-prose: 40em;     /* body paragraph max */
-  --measure-lede:  34em;     /* lede / intro max */
-  --measure-narrow: 760px;   /* centered CTA blocks */
-
-  /* ---- Component spacing ---- */
-  --pad-card:      clamp(26px, 3vw, 40px);
-  --pad-button-y:  15px;
-  --pad-button-x:  30px;
-  --pad-field-y:   8px;
-
-  /* ---- Geometry ---- */
-  --radius:        0px;      /* the brand is square — no rounding */
-  --hair:          1px;      /* standard hairline */
-  --hair-half:     0.5px;    /* fine editorial rule */
-  --marker:        3px;      /* topic accent bar width */
-}
-</style>
-<style>/* ============================================================
-   Effects — Resonance Co.
-   This brand is flat and paper-like: hairline borders instead of
-   shadows, sharp corners, restrained motion. There is essentially
-   no elevation system — depth comes from rules and whitespace.
-   Motion is a single orchestrated "rise + fade" on load and quiet
-   border/colour transitions on hover. No bounce, no scale-up.
-   ============================================================ */
-:root {
-  /* ---- Borders ---- */
-  --border-line:      var(--hair) solid var(--linen);
-  --border-line-fine: var(--hair-half) solid var(--linen);
-  --border-ink:       var(--hair) solid var(--charcoal);
-
-  /* ---- "Shadow" system: there isn't one. ---- */
-  /* The only acknowledged depth is hover lift on bordered cards. */
-  --lift-hover:       translateY(-2px); /* @kind other */
-
-  /* ---- Transitions ---- */
-  --ease:             ease; /* @kind other */
-  --dur-quick:        0.2s; /* @kind other */
-  --dur-base:         0.25s; /* @kind other */
-  --dur-rise:         0.9s; /* @kind other */
-  --transition-hover: border-color var(--dur-base) var(--ease),
-                      color var(--dur-base) var(--ease),
-                      transform var(--dur-base) var(--ease),
-                      background var(--dur-base) var(--ease);
-
-  /* ---- Ghost architecture (colonnade / lace) ---- */
-  --arch-stroke:      var(--linen);
-  --arch-stroke-w:    1.25px;
-  --arch-opacity:     0.4; /* @kind other */
-}
-
-/* ---- The load reveal: one orchestrated rise. ---- */
-@keyframes resonance-riseIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: none; }
-}
-@keyframes resonance-ghostIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-</style>
-<style>/* ============================================================
-   Resonance Co. — Design System
-   Global entry point. Consumers link THIS file only.
-   Keep this as @import lines only — no rules here.
-   ============================================================ */
-/* ============================================================
-   Fonts — Resonance Co. (self-hosted)
-   Two families, served locally from assets/fonts/ so the system
-   works offline and ships the real binaries to consumers.
-   - Cormorant Garamond (serif) — VARIABLE: one file covers the
-     full 300–700 weight range, upright + italic. Display + body.
-   - Jost (sans) — VARIABLE: one file covers the full weight range,
-     upright + italic. Eyebrows, labels, nav, legal — used at 300
-     (light), 400, and 500 (medium).
-   ============================================================ */
-
-/* ---- Cormorant Garamond (variable) ---- */
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("assets/fonts/CormorantGaramond-Variable.ttf") format("truetype");
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("assets/fonts/CormorantGaramond-Italic-Variable.ttf") format("truetype");
-  font-weight: 300 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* ---- Jost (variable) ---- */
-@font-face {
-  font-family: "Jost";
-  src: url("assets/fonts/Jost-Variable.ttf") format("truetype");
-  font-weight: 300 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Jost";
-  src: url("assets/fonts/Jost-Italic-Variable.ttf") format("truetype");
-  font-weight: 300 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* ============================================================
-   Colors — Resonance Co.
-   A warm, paper-and-ink editorial palette: two papers (cream +
-   recessed paper-2), one linen hairline, and ONE warm four-step
-   ink ramp (charcoal → ink-2 → muted → faint). A single rose
-   "signal" accent (one word / one rule per page) and warm course/
-   topic accents used only as 3px markers. Everything is warm: no
-   cool greys, no cool ground. The optional dark slide variant uses
-   warm charcoal with cream/linen chrome; navy survives only as a
-   deep course-content accent, never as a ground.
-   ============================================================ */
-:root {
-  /* ---- Surfaces (warm beige) ---- */
-  --cream:    #F4F3EF;  /* page / canvas */
-  --paper-2:  #EEEBE3;  /* recessed band (e.g. Stay in Touch) */
-  --linen:    #DDD4C2;  /* hairlines, ghost architecture, secondary rules */
-
-  /* ---- Ink — one warm four-step ramp, dark → light ---- */
-  --charcoal: #2A2520;  /* primary ink / dark surface */
-  --ink-2:    #4A4945;  /* secondary body (sublines, blurbs) */
-  --muted:    #6B5F52;  /* captions, labels, eyebrows */
-  --faint:    #9E9484;  /* large numerals, placeholders, faintest chrome */
-
-  /* ---- Signal accent (one word / one rule per page) ---- */
-  --rose:  #B01050;
-
-  /* ---- Course / topic accents (3px markers only, never fills) ---- */
-  --accent-amber:  #D4922A;  /* Course 01 · Designing for Identity */
-  --accent-blue:   #5570A0;  /* Course 02 · Experience Architecture ("faded ink") */
-  --accent-forest: #325E42;  /* Course 03 · Flow State & Narrative Engineering */
-  --accent-olive:  #6E7E28;  /* topic-marker variant (e.g. destination heritage) */
-  --accent-navy:   #0D1B2A;  /* deep navy — course-content accent (markers / rules / headers), NOT a background */
-
-  /* ============================================================
-     Semantic aliases — prefer these in components
-     ============================================================ */
-  --surface-page:  var(--cream);
-  --surface-sunk:  var(--paper-2);
-  --surface-ink:   var(--charcoal);   /* dark buttons / inversions */
-  --surface-dark:  var(--charcoal);   /* dark social-slide variant ground (warm charcoal, never navy) */
-  --on-ink:        var(--cream);      /* text on charcoal */
-
-  --text-strong:    var(--charcoal);
-  --text-body:      var(--charcoal);
-  --text-secondary: var(--ink-2);
-  --text-muted:     var(--muted);
-  --text-faint:     var(--faint);
-  --text-signal:    var(--rose);
-
-  --border-hairline: var(--linen);
-  --border-strong:   var(--charcoal);
-
-  --field-line:        var(--linen);
-  --field-line-focus:  var(--charcoal);
-  --field-placeholder: var(--faint);
-
-  --marker-primary: var(--rose);
-  --marker-blue:    var(--accent-blue);
-  --marker-amber:   var(--accent-amber);
-  --marker-forest:  var(--accent-forest);
-  --marker-olive:   var(--accent-olive);
-  --marker-navy:    var(--accent-navy);
-
-  /* ---- Course axis colors (Rosa's three resonance axes) ---- */
-  --course-01-identity:   var(--accent-amber);   /* Designing for Identity */
-  --course-02-experience: var(--accent-blue);    /* Experience Architecture */
-  --course-03-flow:       var(--accent-forest);  /* Flow State & Narrative Engineering */
-
-  /* ============================================================
-     Social-slide chrome on CREAM — aliases of the warm ink ramp.
-     A two-level hierarchy: muted for the prominent cover wordmark,
-     faint for all quiet interior chrome.
-     ============================================================ */
-  --slide-ink:          var(--muted);  /* cover wordmark / citation */
-  --slide-chrome:       var(--faint);  /* interior masthead */
-  --slide-chrome-soft:  var(--faint);  /* kicker / attribution / axis labels */
-  --slide-chrome-faint: var(--faint);  /* page number / handle */
-
-  /* ============================================================
-     Social-slide chrome on the CHARCOAL dark variant — warm light
-     tints (cream → linen → faint). No cool greys, no brown (muddy
-     on dark). The dark slide ground is warm charcoal, never navy.
-     ============================================================ */
-  --slide-ink-dk:          var(--cream);  /* headline / wordmark on charcoal */
-  --slide-chrome-dk:       var(--linen);  /* kicker on charcoal */
-  --slide-chrome-dk-soft:  var(--faint);  /* interior masthead on charcoal */
-  --slide-chrome-dk-faint: var(--faint);  /* page number / handle on charcoal */
-}
-
-/* ============================================================
-   Typography — Resonance Co.
-   Serif (Cormorant Garamond) carries display + body in a light
-   key (300/400/500). Sans (Jost) is reserved for eyebrows,
-   labels, nav and legal — always uppercase, widely tracked,
-   light weight. Headings run light and large; italics + the
-   rose accent supply emphasis.
-   ============================================================ */
-:root {
-  /* ---- Families ---- */
-  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif; /* @kind font */
-  --font-sans:  "Jost", system-ui, -apple-system, Segoe UI, sans-serif;  /* @kind font */
-
-  /* ---- Weights ---- */
-  --w-light:    300;  /* @kind font */
-  --w-regular:  400;  /* @kind font */
-  --w-medium:   500;  /* @kind font */
-  --w-semi:     600;  /* @kind font */
-
-  /* ---- Display & heading sizes (fluid) ---- */
-  --fs-mast:    clamp(34px, 5.2vw, 62px);  /* @kind font */
-  --fs-display: clamp(30px, 4.2vw, 50px);  /* @kind font */
-  --fs-h1:      clamp(30px, 4vw, 46px);    /* @kind font */
-  --fs-h2:      clamp(26px, 2.8vw, 38px);  /* @kind font */
-  --fs-h3:      clamp(22px, 2.5vw, 30px);  /* @kind font */
-
-  /* ---- Section-head pair (the speaking-page system) ---- */
-  --fs-head-line1: clamp(22px, 2.8vw, 32px);  /* @kind font */
-  --fs-head-line2: clamp(38px, 5vw, 58px);    /* @kind font */
-
-  /* ---- Body & supporting ---- */
-  --fs-lede:    clamp(17px, 1.4vw, 20px);  /* @kind font */
-  --fs-hero-sub:clamp(16px, 1.35vw, 19px);/* @kind font */  /* hero subline (a touch smaller than lede) */
-  --fs-body:    18px;  /* @kind font */
-  --fs-body-sm: 16px;  /* @kind font */
-  --fs-caption: 11px;  /* @kind font */
-
-  /* ---- Eyebrow / label (Jost) ---- */
-  --fs-eyebrow: 11px;    /* @kind font */
-  --fs-label:   12px;    /* @kind font */
-  --fs-nav:     12.5px;  /* @kind font */
-
-  /* ---- Line heights ---- */
-  --lh-tight:   1.05;  /* @kind font */
-  --lh-display: 1.14;  /* @kind font */
-  --lh-body:    1.85;  /* @kind font */
-  --lh-snug:    1.5;   /* @kind font */
-
-  /* ---- Tracking ---- */
-  --ls-tight:   -0.006em;  /* @kind font */
-  --ls-nav:     0.16em;    /* @kind font */
-  --ls-eyebrow: 0.22em;    /* @kind font */
-  --ls-wide:    0.3em;     /* @kind font */
-  --ls-caps:    0.05em;    /* @kind font */
-
-  /* ============================================================
-     Brand lockup — DESIGN-SPECIFIC sizing (NOT type roles).
-     These size the “RESONANCE Co.” wordmark for the logo lockup.
-     Do NOT reuse them as heading/body sizes, and don't “fix” them
-     to match a heading token — they're tuned to the mark itself.
-     ============================================================ */
-  --fs-wordmark:        clamp(24px, 2.6vw, 32px);  /* @kind font */  /* nav wordmark */
-  --fs-wordmark-sub:    clamp(14px, 1.3vw, 17px);  /* @kind font */  /* nav tagline */
-  --fs-wordmark-footer: clamp(22px, 2.4vw, 30px);  /* @kind font */  /* footer wordmark */
-
-  /* ============================================================
-     Semantic role aliases
-     ============================================================ */
-  --text-display-font:  var(--font-serif);  /* @kind font */
-  --text-body-font:     var(--font-serif);  /* @kind font */
-  --text-label-font:    var(--font-sans);   /* @kind font */
-}
-
-/* ============================================================
-   Spacing & layout — Resonance Co.
-   The site is built on generous editorial whitespace and a few
-   fixed measures: a ~1080px reading column, fluid section
-   padding, and a baseline rhythm tuned for serif body copy.
-   ============================================================ */
-:root {
-  /* ---- Spacing scale (px) ---- */
-  --space-1:  4px;
-  --space-2:  8px;
-  --space-3:  12px;
-  --space-4:  16px;
-  --space-5:  24px;
-  --space-6:  32px;
-  --space-7:  40px;
-  --space-8:  56px;
-  --space-9:  72px;
-  --space-10: 104px;
-
-  /* ---- Fluid section rhythm ---- */
-  --pad-section-y: clamp(48px, 7vw, 104px);
-  --pad-section-x: clamp(20px, 5vw, 48px);
-  --gap-spread:    clamp(2.5rem, 5vw, 5rem);   /* two-column editorial gap */
-
-  /* ---- Measures ---- */
-  --measure-page:  1080px;   /* main reading column */
-  --measure-prose: 40em;     /* body paragraph max */
-  --measure-lede:  34em;     /* lede / intro max */
-  --measure-narrow: 760px;   /* centered CTA blocks */
-
-  /* ---- Component spacing ---- */
-  --pad-card:      clamp(26px, 3vw, 40px);
-  --pad-button-y:  15px;
-  --pad-button-x:  30px;
-  --pad-field-y:   8px;
-
-  /* ---- Geometry ---- */
-  --radius:        0px;      /* the brand is square — no rounding */
-  --hair:          1px;      /* standard hairline */
-  --hair-half:     0.5px;    /* fine editorial rule */
-  --marker:        3px;      /* topic accent bar width */
-}
-
-/* ============================================================
-   Effects — Resonance Co.
-   This brand is flat and paper-like: hairline borders instead of
-   shadows, sharp corners, restrained motion. There is essentially
-   no elevation system — depth comes from rules and whitespace.
-   Motion is a single orchestrated "rise + fade" on load and quiet
-   border/colour transitions on hover. No bounce, no scale-up.
-   ============================================================ */
-:root {
-  /* ---- Borders ---- */
-  --border-line:      var(--hair) solid var(--linen);
-  --border-line-fine: var(--hair-half) solid var(--linen);
-  --border-ink:       var(--hair) solid var(--charcoal);
-
-  /* ---- "Shadow" system: there isn't one. ---- */
-  /* The only acknowledged depth is hover lift on bordered cards. */
-  --lift-hover:       translateY(-2px); /* @kind other */
-
-  /* ---- Transitions ---- */
-  --ease:             ease; /* @kind other */
-  --dur-quick:        0.2s; /* @kind other */
-  --dur-base:         0.25s; /* @kind other */
-  --dur-rise:         0.9s; /* @kind other */
-  --transition-hover: border-color var(--dur-base) var(--ease),
-                      color var(--dur-base) var(--ease),
-                      transform var(--dur-base) var(--ease),
-                      background var(--dur-base) var(--ease);
-
-  /* ---- Ghost architecture (colonnade / lace) ---- */
-  --arch-stroke:      var(--linen);
-  --arch-stroke-w:    1.25px;
-  --arch-opacity:     0.4; /* @kind other */
-}
-
-/* ---- The load reveal: one orchestrated rise. ---- */
-@keyframes resonance-riseIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: none; }
-}
-@keyframes resonance-ghostIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-</style>
-<script src="assets/js/ds-bundle.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://resonanceco.co/#org","name":"Resonance Co.","url":"https://resonanceco.co/","slogan":"Event Education & Strategy","email":"hello@resonanceco.co","founder":{"@id":"https://resonanceco.co/#rayven"},"sameAs":["https://www.instagram.com/resonancecoevents","https://www.tiktok.com/@resonancecoevents"]},
+ {"@type":"Person","@id":"https://resonanceco.co/#rayven","name":"Rayven Crisafulli","honorificSuffix":"PhD, CMP","jobTitle":"Founder, Resonance Co.","worksFor":{"@id":"https://resonanceco.co/#org"},"description":"Event design educator and researcher. Thirteen years planning events, five years teaching event management at the University of Florida, and doctoral research on what makes events resonate.","alumniOf":{"@type":"CollegeOrUniversity","name":"University of Florida"},"knowsAbout":["event design","event experience design","event management education","resonance theory","wedding planning","meeting planning"],"image":"https://resonanceco.co/assets/Ash-Simmons-Photography-Headshots-136.jpg","url":"https://resonanceco.co/about.html"},
+ {"@type":"WebSite","@id":"https://resonanceco.co/#site","url":"https://resonanceco.co/","name":"Resonance Co.","publisher":{"@id":"https://resonanceco.co/#org"}}
+]}
+</script>
 <style>
-  body{margin:0;background:var(--cream);color:var(--charcoal);font-family:var(--font-serif);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
-  *,*::before,*::after{box-sizing:border-box;}
-  img{max-width:100%;display:block;}
-  a{color:inherit;}
-  [data-rise]{opacity:0;transform:translateY(12px);transition:opacity .7s ease,transform .7s ease;}
-  [data-ghost]{opacity:0;transition:opacity 1.4s ease;}
-  .revealed [data-rise]{opacity:1;transform:none;}
-  .revealed [data-ghost]{opacity:1;}
-  .revealed [data-rise="1"]{transition-delay:.1s;}
-  .revealed [data-rise="2"]{transition-delay:.2s;}
-  .revealed [data-rise="3"]{transition-delay:.3s;}
-  .navlink{border-bottom:1px solid transparent;transition:border-color .2s;}
-  .navlink:hover{border-color:var(--linen);}
-  .navlink.active{border-color:var(--charcoal);}
-  @media (prefers-reduced-motion:reduce){[data-rise],[data-ghost]{opacity:1!important;transform:none!important;transition:none!important;}}
-  [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease;}
-  [data-reveal].shown{opacity:1;transform:none;}
-  [data-reveal][data-delay="1"]{transition-delay:.12s;}
-  @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1!important;transform:none!important;transition:none!important;}}
-  @media (max-width:720px){[data-beat="promise"]{grid-template-columns:1fr !important;gap:clamp(1.4rem,5vw,2rem) !important;}[data-beat="promise"] img{aspect-ratio:16/10 !important;}}
-  @media (max-width:860px){[data-grid="stay"]{grid-template-columns:1fr !important;}}
-  @media (max-width:820px){[data-grid="diptych"]{grid-template-columns:1fr !important;}[data-dip="found"]{padding-right:0 !important;}[data-dip="phil"]{padding-left:0 !important;border-left:none !important;border-top:1px solid var(--linen) !important;margin-top:clamp(28px,6vw,40px);padding-top:clamp(28px,6vw,40px);}}
-  @media (max-width:720px){[data-grid="dir"]{grid-template-columns:1fr !important;}}
-  @media (max-width:760px){[data-beat]{grid-template-columns:1fr !important;gap:.7rem !important;}}
-  /* Keep all three directory card titles on a single line (longest: "EVENT COMMUNITIES") */
-  [data-grid="dir"] span:last-of-type:not(:first-of-type){white-space:nowrap !important;font-size:clamp(16px,1.9vw,23px) !important;}
-  /* Cards are framed by mirrored lace bands top & bottom: equal padding so the header and link sit symmetrically inside the frames */
-  [data-grid="dir"] .sc-host-x > div{padding-top:clamp(60px,6vw,80px) !important;padding-bottom:clamp(60px,6vw,80px) !important;}
-</style>
-</helmet>
+/* ---- self-hosted variable fonts ---- */
+@font-face{ font-family:"Cormorant Garamond"; src:url("assets/fonts/CormorantGaramond-Variable.ttf") format("truetype"); font-weight:300 700; font-style:normal; font-display:swap; }
+@font-face{ font-family:"Cormorant Garamond"; src:url("assets/fonts/CormorantGaramond-Italic-Variable.ttf") format("truetype"); font-weight:300 700; font-style:italic; font-display:swap; }
+@font-face{ font-family:"Jost"; src:url("assets/fonts/Jost-Variable.ttf") format("truetype"); font-weight:300 500; font-style:normal; font-display:swap; }
+@font-face{ font-family:"Jost"; src:url("assets/fonts/Jost-Italic-Variable.ttf") format("truetype"); font-weight:300 500; font-style:italic; font-display:swap; }
+:root{ --font-serif:var(--serif); --font-sans:var(--sans); --fs-mast:clamp(34px,5.2vw,62px); --fs-h1:clamp(30px,4vw,46px); --fs-lede:clamp(17px,1.4vw,20px); --lh-display:1.14; --ls-tight:-.006em; }
 
-<!-- ============ SITE NAV ============ -->
-<header data-screen-label="Home" style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding:clamp(22px,3vw,40px) clamp(24px,5vw,64px) 18px;">
-  <a href="index.html" style="text-decoration:none;color:var(--charcoal);line-height:1;display:flex;flex-direction:column;align-items:center;">
-    <span style="font-family:var(--font-serif);font-size:clamp(24px,2.6vw,32px);font-weight:400;letter-spacing:.01em;border-bottom:1px solid var(--charcoal);padding-bottom:6px;">RESONANCE <span style="font-weight:300;">Co.</span></span>
-    <em style="display:block;font-family:var(--font-serif);font-style:italic;font-size:clamp(14px,1.3vw,17px);font-weight:500;margin-top:8px;color:var(--muted);">Event Education &amp; Strategy</em>
-  </a>
-  <nav style="display:flex;gap:clamp(22px,4vw,52px);padding-bottom:6px;">
-    <a class="navlink active" href="index.html" style="font-family:var(--font-sans);font-weight:300;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--charcoal);padding-bottom:8px;">Home</a>
-    <a class="navlink" href="about.html" style="font-family:var(--font-sans);font-weight:300;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--charcoal);padding-bottom:8px;">About</a>
-    <a class="navlink" href="for-event-communities.html" style="font-family:var(--font-sans);font-weight:300;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--charcoal);padding-bottom:8px;">For Event Communities</a>
-  </nav>
-</header>
+.eyebrow{ font-family:var(--sans); font-weight:300; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); }
+.eyebrow.wide{ letter-spacing:.3em; font-size:12.5px; }
+.page-link{ font-family:var(--sans); font-weight:300; font-size:12px; letter-spacing:.16em; text-transform:uppercase; text-decoration:none; color:var(--charcoal); border-bottom:.5px solid var(--charcoal); padding-bottom:3px; display:inline-block; transition:color .2s,border-color .2s; }
+.page-link:hover{ color:var(--rose); border-color:var(--rose); }
+.cap-link{ color:inherit; text-decoration:none; border-bottom:.5px solid var(--linen); transition:color .2s,border-color .2s; }
+.cap-link:hover{ color:var(--rose); border-color:var(--rose); }
+
+/* ---- load reveal + scroll reveal ---- */
+@keyframes riseIn{ from{ opacity:0; transform:translateY(12px); } to{ opacity:1; transform:none; } }
+@keyframes ghostIn{ from{ opacity:0; } to{ opacity:1; } }
+.mast .ghost{ animation:ghostIn 1.4s ease .1s both; }
+.mast .r0{ animation:riseIn .7s ease both; }
+.mast .r1{ animation:riseIn .9s ease .12s both; }
+.mast .r2{ animation:riseIn .9s ease .28s both; }
+[data-reveal]{ opacity:0; transform:translateY(30px); transition:opacity 1s ease,transform 1s ease; }
+[data-reveal].shown{ opacity:1; transform:none; }
+[data-reveal][data-delay="1"]{ transition-delay:.12s; }
+.no-js [data-reveal]{ opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){ .mast .ghost,.mast .r0,.mast .r1,.mast .r2{ animation:none; opacity:1; transform:none; } [data-reveal]{ opacity:1 !important; transform:none !important; transition:none !important; } }
+
+/* ---- masthead ---- */
+.mast{ position:relative; overflow:hidden; }
+.mast .wrap{ max-width:1080px; margin:0 auto; padding:clamp(40px,6vw,84px) clamp(24px,5vw,48px) clamp(40px,6vw,72px); position:relative; }
+.mast .backdrop{ position:absolute; left:0; right:0; top:0; pointer-events:none; z-index:0; overflow:hidden; }
+.mast .arches-wrap{ position:relative; width:100%; padding-bottom:60.83%; }
+.mast .arches{ position:absolute; top:0; left:0; width:100%; height:100%; display:block; opacity:.62; }
+.mast .inner{ position:relative; z-index:1; max-width:820px; margin:0 auto; text-align:center; padding-top:clamp(48px,9vw,128px); }
+.mast .inner .eyebrow{ display:block; margin-bottom:clamp(20px,3vw,30px); }
+.mast h1{ font-family:var(--serif); font-weight:300; font-size:var(--fs-mast); line-height:var(--lh-display); letter-spacing:var(--ls-tight); max-width:14em; margin:0 auto; color:var(--charcoal); }
+.rotor{ display:grid; justify-items:center; align-items:start; margin:clamp(14px,1.8vw,22px) auto 0; }
+.rotor span{ grid-area:1/1; font-family:var(--serif); font-style:italic; font-weight:300; font-size:clamp(21px,2.5vw,31px); line-height:1.3; letter-spacing:var(--ls-tight); color:var(--charcoal); opacity:0; }
+.rotor span:nth-child(1){ animation:hr1 10.2s ease infinite; }
+.rotor span:nth-child(2){ animation:hr2 10.2s ease infinite; }
+.rotor span:nth-child(3){ animation:hr3 10.2s ease infinite; }
+@keyframes hr1{ 0%{opacity:0} 3%{opacity:1} 30%{opacity:1} 36%{opacity:0} 100%{opacity:0} }
+@keyframes hr2{ 0%,30%{opacity:0} 36%{opacity:1} 63%{opacity:1} 69%{opacity:0} 100%{opacity:0} }
+@keyframes hr3{ 0%,63%{opacity:0} 69%{opacity:1} 96%{opacity:1} 100%{opacity:0} }
+@media (prefers-reduced-motion:reduce){ .rotor span{ animation:none !important; } .rotor span:nth-child(1){ opacity:1; } }
+
+/* ---- the work section ---- */
+.work{ max-width:1080px; margin:0 auto; padding:clamp(76px,13vw,190px) clamp(24px,5vw,48px) clamp(76px,11vw,160px); }
+.promise{ max-width:920px; margin:0 auto 0 0; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(2rem,4.5vw,4.75rem); align-items:center; }
+.promise figure{ margin:0; position:relative; }
+.promise img{ width:100%; aspect-ratio:1/1; object-fit:cover; background:var(--linen); display:block; }
+.promise figcaption{ position:absolute; top:100%; left:0; font-family:var(--sans); font-weight:300; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); line-height:1.9; margin-top:.9rem; white-space:nowrap; }
+.promise h2{ font-family:var(--serif); font-weight:300; font-size:var(--fs-h1); line-height:var(--lh-display); letter-spacing:var(--ls-tight); color:var(--charcoal); margin:0 0 clamp(20px,2.4vw,30px); }
+.promise .lede{ font-family:var(--serif); font-weight:500; font-size:var(--fs-lede); line-height:1.8; color:var(--ink-2); margin:0; }
+@media (max-width:720px){ .promise{ grid-template-columns:1fr; gap:clamp(1.4rem,5vw,2rem); } .promise img{ aspect-ratio:16/10; } .promise figcaption{ position:static; } }
+.who-eyebrow{ max-width:580px; margin:clamp(112px,17vw,240px) auto clamp(24px,4vw,44px) 0; text-align:left; }
+
+/* ---- directory ---- */
+.dir{ position:relative; z-index:1; display:grid; grid-template-columns:repeat(3,1fr); gap:1px; }
+.dbay{ background:var(--cream); position:relative; overflow:hidden; display:flex; flex-direction:column; align-items:center; text-align:center; padding:clamp(60px,6vw,80px) clamp(24px,2.6vw,36px); min-height:400px; }
+.dbay .lead{ display:block; font-family:var(--serif); font-style:italic; font-weight:500; font-size:clamp(17px,1.5vw,20px); color:var(--muted); line-height:1.15; }
+.dbay .big{ display:block; font-family:var(--serif); font-weight:300; text-transform:uppercase; letter-spacing:.045em; font-size:clamp(16px,1.9vw,23px); line-height:1.05; margin-top:.12em; color:var(--charcoal); white-space:nowrap; }
+.dbay p{ font-family:var(--serif); font-weight:500; font-size:15.5px; line-height:1.8; color:var(--ink-2); margin:clamp(14px,2vw,18px) 0 clamp(18px,2.4vw,24px); max-width:30ch; }
+.dbay .foot{ margin-top:auto; }
+.dbay .lace-band{ position:absolute; left:50%; transform:translateX(-50%); width:162px; height:36px; pointer-events:none; z-index:3; }
+.dbay .lace-band.top{ top:0; }
+.dbay .lace-band.bot{ bottom:0; transform:translateX(-50%) scaleY(-1); }
+.dir .vdiv{ position:absolute; top:50%; width:1px; height:clamp(96px,11vw,150px); transform:translateY(-50%); background:var(--linen); pointer-events:none; z-index:2; }
+@media (max-width:720px){ .dir{ grid-template-columns:1fr; } .dir .vdiv{ display:none; } }
+
+/* ---- diptych ---- */
+.dipwrap{ max-width:1080px; margin:0 auto; padding:clamp(28px,4vw,60px) clamp(24px,5vw,48px); }
+.diptych{ display:grid; grid-template-columns:1fr 1fr; align-items:start; }
+.dip-found{ padding-right:clamp(2rem,4vw,4.5rem); }
+.dip-phil{ padding-left:clamp(2rem,4vw,4.5rem); border-left:1px solid var(--linen); }
+.diptych .eyebrow{ display:block; margin-bottom:clamp(18px,2.2vw,28px); }
+.dip-found img{ width:clamp(150px,42%,196px); aspect-ratio:4/5; object-fit:cover; object-position:50% 20%; margin-bottom:clamp(14px,1.8vw,20px); }
+.dip-found .cap{ font-family:var(--sans); font-weight:300; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); line-height:1.95; margin:0 0 clamp(22px,2.8vw,32px); }
+.diptych p.body{ font-family:var(--serif); font-weight:500; font-size:clamp(17px,1.35vw,18.5px); line-height:1.85; margin:0 0 1.2rem; }
+.dip-found p.body{ color:var(--charcoal); }
+.dip-phil p.body{ color:var(--ink-2); }
+.dip-phil h2{ font-family:var(--serif); font-weight:300; font-size:var(--fs-h1); line-height:var(--lh-display); letter-spacing:var(--ls-tight); color:var(--charcoal); margin:0 0 1.4rem; }
+@media (max-width:820px){ .diptych{ grid-template-columns:1fr; } .dip-found{ padding-right:0; } .dip-phil{ padding-left:0; border-left:none; border-top:1px solid var(--linen); margin-top:clamp(28px,6vw,40px); padding-top:clamp(28px,6vw,40px); } }
+
+/* ---- quotes ---- */
+.quotes{ background:var(--cream); }
+.quotes .wrap{ max-width:980px; margin:0 auto; padding:clamp(40px,6vw,78px) clamp(24px,5vw,48px); text-align:center; }
+.quotes .label{ font-family:var(--sans); font-weight:300; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--muted); margin-bottom:clamp(28px,3.6vw,46px); }
+.qstack{ display:grid; grid-template-columns:minmax(0,1fr); align-items:center; }
+.qstack blockquote{ grid-area:1/1; margin:0 auto; max-width:820px; opacity:0; }
+.qstack blockquote p{ font-family:var(--serif); font-style:italic; font-weight:300; font-size:clamp(24px,3vw,38px); line-height:1.32; letter-spacing:var(--ls-tight); color:var(--charcoal); margin:0 0 clamp(20px,2.4vw,30px); }
+.qstack blockquote footer{ font-family:var(--sans); font-weight:300; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); }
+.qstack blockquote:nth-child(1){ animation:qr1 20.8s ease infinite; }
+.qstack blockquote:nth-child(2){ animation:qr2 20.8s ease infinite; }
+.qstack blockquote:nth-child(3){ animation:qr3 20.8s ease infinite; }
+.qstack blockquote:nth-child(4){ animation:qr4 20.8s ease infinite; }
+@keyframes qr1{ 0%{opacity:0} 2%{opacity:1} 22%{opacity:1} 27%{opacity:0} 100%{opacity:0} }
+@keyframes qr2{ 0%,22%{opacity:0} 27%{opacity:1} 47%{opacity:1} 52%{opacity:0} 100%{opacity:0} }
+@keyframes qr3{ 0%,47%{opacity:0} 52%{opacity:1} 72%{opacity:1} 77%{opacity:0} 100%{opacity:0} }
+@keyframes qr4{ 0%,72%{opacity:0} 77%{opacity:1} 97%{opacity:1} 100%{opacity:0} }
+@media (prefers-reduced-motion:reduce){ .qstack blockquote{ animation:none !important; } .qstack blockquote:nth-child(1){ opacity:1; } }
+.quotes .lace{ max-width:600px; margin:clamp(24px,3vw,40px) auto 0; padding:0 36px; }
+.quotes .lace svg{ display:block; width:100%; height:auto; }
+
+/* ---- stay in touch ---- */
+.stay{ background:var(--paper-2); border-top:1px solid var(--linen); border-bottom:1px solid var(--linen); }
+.stay .wrap{ max-width:1080px; margin:0 auto; padding:clamp(48px,6vw,88px) clamp(20px,5vw,40px); }
+.stay .eyebrow{ display:block; margin-bottom:1rem; }
+.stay form{ margin-top:26px; max-width:520px; }
+.stay .f-label{ display:block; font-family:var(--sans); font-weight:300; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:24px 0 8px; }
+.stay input[type=text],.stay input[type=email]{ width:100%; background:transparent; border:none; border-bottom:1px solid var(--linen); padding:8px 0; font-family:var(--serif); font-size:18px; color:var(--charcoal); outline:none; border-radius:0; }
+.stay input[type=text]:focus,.stay input[type=email]:focus{ border-bottom-color:var(--charcoal); }
+.stay textarea{ width:100%; background:transparent; border:1px solid var(--linen); padding:12px 14px; min-height:120px; resize:vertical; font-family:var(--serif); font-size:18px; line-height:1.6; color:var(--charcoal); outline:none; border-radius:0; }
+.stay textarea:focus{ border-color:var(--charcoal); }
+.stay .opt{ display:flex; align-items:flex-start; gap:12px; margin-top:14px; font-family:var(--serif); font-size:16px; color:var(--charcoal); cursor:pointer; }
+.stay .opt input{ width:16px; height:16px; margin-top:5px; accent-color:var(--charcoal); flex-shrink:0; }
+.stay .msg-field{ display:none; margin-top:6px; }
+.stay .msg-field.open{ display:block; }
+.stay button{ margin-top:32px; min-width:220px; font-family:var(--sans); font-weight:300; font-size:12px; letter-spacing:.2em; text-transform:uppercase; background:var(--charcoal); color:var(--cream); border:1px solid var(--charcoal); padding:15px 30px; cursor:pointer; border-radius:0; transition:opacity .25s; }
+.stay button:hover{ opacity:.88; }
+.stay .thanks{ font-family:var(--serif); font-weight:500; font-size:clamp(18px,1.5vw,21px); line-height:1.75; color:var(--charcoal); margin:26px 0 0; max-width:520px; display:none; }
+.stay .thanks em{ font-style:italic; color:var(--muted); }
+</style>
+</head>
+<body class="no-js">
+<script>document.body.classList.remove('no-js');</script>
+<header class="site-nav"><a class="brand" href="index.html"><span class="wm">RESONANCE <span>Co.</span></span><em>Event Education &amp; Strategy</em></a><nav class="links"><a href="index.html" class="active">Home</a><a href="about.html">About</a><a href="for-event-communities.html">For Event Communities</a></nav></header>
 
 <!-- ============ MASTHEAD ============ -->
-<section style="position:relative;overflow:hidden;">
-  <div style="max-width:1080px;margin:0 auto;padding:clamp(40px,6vw,84px) clamp(24px,5vw,48px) clamp(40px,6vw,72px);position:relative;">
-    <div data-ghost="" aria-hidden="true" style="position:absolute;left:0;right:0;top:0;pointer-events:none;z-index:0;overflow:hidden;">
-      <div style="position:relative;width:100%;padding-bottom:60.83%;">
-        <div style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:.62;">
-          <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.ArchMotif" variant="colonnade" hint-size="100%,360px"></x-import>
-        </div>
+<section class="mast">
+  <div class="wrap">
+    <div class="backdrop ghost" aria-hidden="true">
+      <div class="arches-wrap">
+        <svg class="arches" viewBox="0 0 600 365" xmlns="http://www.w3.org/2000/svg" role="presentation">
+          <g fill="none" stroke="#DDD4C2" stroke-width="1.25" stroke-linecap="round" opacity="0.4">
+            <line x1="21" y1="25" x2="21" y2="365" />
+            <line x1="579" y1="25" x2="579" y2="365" />
+            <line x1="207" y1="195" x2="207" y2="365" />
+            <line x1="393" y1="195" x2="393" y2="365" />
+            <path d="M 21 195 A 186 186 0 0 1 114 34 A 186 186 0 0 1 207 195 A 186 186 0 0 1 300 34 A 186 186 0 0 1 393 195 A 186 186 0 0 1 486 34 A 186 186 0 0 1 579 195" />
+            <path d="M 0 10 A 186 186 0 0 1 207 195" />
+            <path d="M 21 195 A 186 186 0 0 1 393 195" />
+            <path d="M 207 195 A 186 186 0 0 1 579 195" />
+            <path d="M 393 195 A 186 186 0 0 1 600 10" />
+          </g>
+        </svg>
       </div>
     </div>
-    <div style="position:relative;z-index:1;max-width:820px;margin:0 auto;text-align:center;padding-top:clamp(48px,9vw,128px);">
-      <div data-rise="" style="margin-bottom:clamp(20px,3vw,30px);">
-        <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.Eyebrow" wide="1" hint-size="240px,20px">Event Design Education</x-import>
-      </div>
-      <h1 data-rise="1" style="font-family:var(--font-serif);font-weight:300;font-size:var(--fs-mast);line-height:var(--lh-display);letter-spacing:var(--ls-tight);max-width:14em;margin:0 auto;color:var(--charcoal);">Design the moments<br>people remember.</h1>
-      <div data-rise="2" style="display:grid;justify-items:center;align-items:start;max-width:none;margin:clamp(14px,1.8vw,22px) auto 0;">
-        <span style="grid-area:1/1;font-family:var(--font-serif);font-style:italic;font-weight:300;font-size:clamp(21px,2.5vw,31px);line-height:1.3;letter-spacing:var(--ls-tight);color:var(--charcoal);transition:opacity 1s ease;opacity:{{ o0 }};">The curated details.</span>
-        <span style="grid-area:1/1;font-family:var(--font-serif);font-style:italic;font-weight:300;font-size:clamp(21px,2.5vw,31px);line-height:1.3;letter-spacing:var(--ls-tight);color:var(--charcoal);transition:opacity 1s ease;opacity:{{ o1 }};">The immersive experience.</span>
-        <span style="grid-area:1/1;font-family:var(--font-serif);font-style:italic;font-weight:300;font-size:clamp(21px,2.5vw,31px);line-height:1.3;letter-spacing:var(--ls-tight);color:var(--charcoal);transition:opacity 1s ease;opacity:{{ o2 }};">The transformative story.</span>
+    <div class="inner">
+      <span class="eyebrow wide r0">Event Design Education</span>
+      <h1 class="r1">Design the moments<br>people remember.</h1>
+      <div class="rotor r2" aria-label="The curated details. The immersive experience. The transformative story.">
+        <span aria-hidden="true">The curated details.</span>
+        <span aria-hidden="true">The immersive experience.</span>
+        <span aria-hidden="true">The transformative story.</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ THE WORK — BRAND PROMISE (LEFT) → WHO WE WORK WITH (RIGHT) ============ -->
-<section data-screen-label="Who We Work With" id="what-to-expect" style="max-width:1080px;margin:0 auto;padding:clamp(76px,13vw,190px) clamp(24px,5vw,48px) clamp(76px,11vw,160px);">
-
-  <!-- Beat 1 · brand promise — photo + text -->
-  <div data-reveal="" data-beat="promise" style="max-width:920px;margin:0 auto 0 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,4.5vw,4.75rem);align-items:center;">
-    <figure style="margin:0;position:relative;">
-      <img src="assets/crane-cottage-courtyard.jpg" alt="Overhead view of the Crane Cottage courtyard during an event" style="width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--linen);display:block;">
-      <figcaption style="position:absolute;top:100%;left:0;font-family:var(--font-sans);font-weight:300;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);line-height:1.9;margin-top:.9rem;white-space:nowrap;">Crane Cottage Courtyard · <a href="https://www.jekyllclub.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:.5px solid var(--linen);transition:color .2s,border-color .2s;" style-hover="color:var(--rose);border-bottom:.5px solid var(--rose);text-decoration:none;">Jekyll Island Club Resort</a><br>Photo · <a href="https://jillianknight.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:.5px solid var(--linen);transition:color .2s,border-color .2s;" style-hover="color:var(--rose);border-bottom:.5px solid var(--rose);text-decoration:none;">Jillian Knight Photography</a></figcaption>
+<!-- ============ BRAND PROMISE + WHO WE WORK WITH ============ -->
+<section class="work" id="what-to-expect">
+  <div class="promise" data-reveal>
+    <figure>
+      <img src="assets/crane-cottage-courtyard.jpg" alt="Overhead view of the Crane Cottage courtyard during an event">
+      <figcaption>Crane Cottage Courtyard &middot; <a class="cap-link" href="https://www.jekyllclub.com/" target="_blank" rel="noopener">Jekyll Island Club Resort</a><br>Photo &middot; <a class="cap-link" href="https://jillianknight.com/" target="_blank" rel="noopener">Jillian Knight Photography</a></figcaption>
     </figure>
     <div>
-      <h2 style="font-family:var(--font-serif);font-weight:300;font-size:var(--fs-h1);line-height:var(--lh-display);letter-spacing:var(--ls-tight);color:var(--charcoal);margin:0 0 clamp(20px,2.4vw,30px);">Resonance Co. is where event designers come to hone their craft.</h2>
-      <p style="font-family:var(--font-serif);font-weight:500;font-size:var(--fs-lede);line-height:1.8;color:var(--ink-2);margin:0;">Education grounded in academic research, <br>built by someone who has spent years <br>planning events, not just studying them.</p>
+      <h2>Resonance Co. is where event designers come to hone their craft.</h2>
+      <p class="lede">Education grounded in academic research, <br>built by someone who has spent years <br>planning events, not just studying them.</p>
     </div>
   </div>
 
-  <!-- Beat 2 · who we work with — eyebrow leads straight into the directory -->
-  <div data-reveal="" data-delay="1" data-beat="who" style="max-width:580px;margin:clamp(112px,17vw,240px) auto clamp(24px,4vw,44px) 0;text-align:left;">
-    <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.Eyebrow" hint-size="220px,20px">serving the event industry</x-import>
-  </div>
-  <div data-grid="dir" ref="{{ setGridRef }}" style="position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;">
-    <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.BayCard" crown="none" lead="Courses for" title="Event Planners" link-label="Hear when they launch" href="#stay-in-touch" hint-size="100%,400px">Courses that turn the instinct planners already have into intention, built on resonance mapping and years in the field.</x-import>
-    <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.BayCard" crown="none" lead="Lectures &amp; workshops for" title="Event Communities" link-label="Topics &amp; more" href="for-event-communities.html" hint-size="100%,400px">Educational programming customized to your members and the events they run, with practical frameworks, resources for their next event, and a new way of seeing the work.</x-import>
-    <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.BayCard" crown="none" lead="Consultations for the" title="Event Industry" link-label="Start a conversation" href="#stay-in-touch" hint-size="100%,400px">Whether you're planning a festival or building a venue from the ground up, we work with individuals and organizations to think through the strategy behind the experience.</x-import>
-    {{ laceBand }}
-    <div aria-hidden="true" style="position:absolute;top:50%;left:calc(33.3333% - 0.5px);width:1px;height:clamp(96px,11vw,150px);transform:translateY(-50%);background:var(--linen);pointer-events:none;z-index:2;"></div>
-    <div aria-hidden="true" style="position:absolute;top:50%;left:calc(66.6667% - 0.5px);width:1px;height:clamp(96px,11vw,150px);transform:translateY(-50%);background:var(--linen);pointer-events:none;z-index:2;"></div>
+  <div class="who-eyebrow" data-reveal data-delay="1"><span class="eyebrow">serving the event industry</span></div>
+  <div class="dir">
+    <div class="dbay">
+      <svg class="lace-band top" viewBox="0 0 162 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#DDD4C2" stroke-width="1" stroke-linecap="round"><line x1="0" y1="12" x2="162" y2="12"/><path d="M26 12 A22 22 0 0 0 70 12"/><path d="M48 12 A22 22 0 0 0 92 12"/><path d="M70 12 A22 22 0 0 0 114 12"/><path d="M92 12 A22 22 0 0 0 136 12"/></g></svg>
+      <div><span class="lead">Courses for</span><span class="big">Event Planners</span></div>
+      <p>Courses that turn the instinct planners already have into intention, built on resonance mapping and years in the field.</p>
+      <div class="foot"><a class="page-link" href="#stay-in-touch">Hear when they launch &rarr;</a></div>
+      <svg class="lace-band bot" viewBox="0 0 162 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#DDD4C2" stroke-width="1" stroke-linecap="round"><line x1="0" y1="12" x2="162" y2="12"/><path d="M26 12 A22 22 0 0 0 70 12"/><path d="M48 12 A22 22 0 0 0 92 12"/><path d="M70 12 A22 22 0 0 0 114 12"/><path d="M92 12 A22 22 0 0 0 136 12"/></g></svg>
+    </div>
+    <div class="dbay">
+      <svg class="lace-band top" viewBox="0 0 162 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#DDD4C2" stroke-width="1" stroke-linecap="round"><line x1="0" y1="12" x2="162" y2="12"/><path d="M26 12 A22 22 0 0 0 70 12"/><path d="M48 12 A22 22 0 0 0 92 12"/><path d="M70 12 A22 22 0 0 0 114 12"/><path d="M92 12 A22 22 0 0 0 136 12"/></g></svg>
+      <div><span class="lead">Lectures &amp; workshops for</span><span class="big">Event Communities</span></div>
+      <p>Educational programming customized to your members and the events they run, with practical frameworks, resources for their next event, and a new way of seeing the work.</p>
+      <div class="foot"><a class="page-link" href="for-event-communities.html">Topics &amp; more &rarr;</a></div>
+      <svg class="lace-band bot" viewBox="0 0 162 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#DDD4C2" stroke-width="1" stroke-linecap="round"><line x1="0" y1="12" x2="162" y2="12"/><path d="M26 12 A22 22 0 0 0 70 12"/><path d="M48 12 A22 22 0 0 0 92 12"/><path d="M70 12 A22 22 0 0 0 114 12"/><path d="M92 12 A22 22 0 0 0 136 12"/></g></svg>
+    </div>
+    <div class="dbay">
+      <svg class="lace-band top" viewBox="0 0 162 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#DDD4C2" stroke-width="1" stroke-linecap="round"><line x1="0" y1="12" x2="162" y2="12"/><path d="M26 12 A22 22 0 0 0 70 12"/><path d="M48 12 A22 22 0 0 0 92 12"/><path d="M70 12 A22 22 0 0 0 114 12"/><path d="M92 12 A22 22 0 0 0 136 12"/></g></svg>
+      <div><span class="lead">Consultations for the</span><span class="big">Event Industry</span></div>
+      <p>Whether you're planning a festival or building a venue from the ground up, we work with individuals and organizations to think through the strategy behind the experience.</p>
+      <div class="foot"><a class="page-link" href="#stay-in-touch">Start a conversation &rarr;</a></div>
+      <svg class="lace-band bot" viewBox="0 0 162 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#DDD4C2" stroke-width="1" stroke-linecap="round"><line x1="0" y1="12" x2="162" y2="12"/><path d="M26 12 A22 22 0 0 0 70 12"/><path d="M48 12 A22 22 0 0 0 92 12"/><path d="M70 12 A22 22 0 0 0 114 12"/><path d="M92 12 A22 22 0 0 0 136 12"/></g></svg>
+    </div>
+    <div class="vdiv" style="left:calc(33.3333% - 0.5px);" aria-hidden="true"></div>
+    <div class="vdiv" style="left:calc(66.6667% - 0.5px);" aria-hidden="true"></div>
   </div>
 </section>
 
 <!-- ============ FOUNDER + PHILOSOPHY DIPTYCH ============ -->
-<section data-screen-label="Founder &amp; Philosophy" style="max-width:1080px;margin:0 auto;padding:clamp(28px,4vw,60px) clamp(24px,5vw,48px);">
-  <div data-grid="diptych" style="display:grid;grid-template-columns:1fr 1fr;align-items:start;">
-    <!-- Founder panel -->
-    <div data-dip="found" style="padding-right:clamp(2rem,4vw,4.5rem);">
-      <div style="margin-bottom:clamp(18px,2.2vw,28px);">
-        <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.Eyebrow" hint-size="200px,20px">From the Founder</x-import>
-      </div>
-      <img src="assets/Ash-Simmons-Photography-Headshots-136.jpg" alt="Rayven Crisafulli, founder of Resonance Co." style="width:clamp(150px,42%,196px);aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;margin-bottom:clamp(14px,1.8vw,20px);">
-      <p style="font-family:var(--font-sans);font-weight:300;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:1.95;margin:0 0 clamp(22px,2.8vw,32px);">Rayven Crisafulli, PhD, CMP<br><span style="color:var(--muted);">Founder, Resonance Co.</span></p>
-      <p style="font-family:var(--font-serif);font-weight:500;font-size:clamp(17px,1.35vw,18.5px);line-height:1.85;color:var(--charcoal);margin:0 0 1.2rem;">Events have been my work for thirteen years: eight as a planner, five teaching event management to university students, and eventually as a doctoral researcher chasing one question: why some events feel like the best day of your life, the kind you don’t want to end, while others are pleasant enough, but lacking that <i>je ne sais quoi,</i> that something special that made it feel a bit magical.</p>
-      <p style="font-family:var(--font-serif);font-weight:500;font-size:clamp(17px,1.35vw,18.5px);line-height:1.85;color:var(--charcoal);margin:0 0 1.2rem;">It isn’t budget, and it isn’t aesthetics. I’ve watched a modest wedding move a room to tears and a lavish, beautifully styled one leave everyone cold, and I’ve seen the same split at conferences. The difference lives beneath all of that: whether an event makes you feel something, connect to the people in the room, and attach meaning to the whole of it.</p>
-      <p style="font-family:var(--font-serif);font-weight:500;font-size:clamp(17px,1.35vw,18.5px);line-height:1.85;color:var(--charcoal);margin:0 0 1.6rem;">That question became my dissertation, and then it became Resonance Co. This space was built for planners who see an event as more than a series of logistics, but as an opportunity to tell a story through the medium of an experience. If that is the kind of planner you are, or the kind you’re becoming, you belong here.</p>
-      <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.PageLink" href="about.html" arrow="right" hint-size="220px,24px">Read the full story</x-import>
+<section class="dipwrap">
+  <div class="diptych">
+    <div class="dip-found">
+      <span class="eyebrow">From the Founder</span>
+      <img src="assets/Ash-Simmons-Photography-Headshots-136.jpg" alt="Rayven Crisafulli, founder of Resonance Co.">
+      <p class="cap">Rayven Crisafulli, PhD, CMP<br>Founder, Resonance Co.</p>
+      <p class="body">Events have been my work for thirteen years: eight as a planner, five teaching event management to university students, and eventually as a doctoral researcher chasing one question: why some events feel like the best day of your life, the kind you don&rsquo;t want to end, while others are pleasant enough, but lacking that <i>je ne sais quoi,</i> that something special that made it feel a bit magical.</p>
+      <p class="body">It isn&rsquo;t budget, and it isn&rsquo;t aesthetics. I&rsquo;ve watched a modest wedding move a room to tears and a lavish, beautifully styled one leave everyone cold, and I&rsquo;ve seen the same split at conferences. The difference lives beneath all of that: whether an event makes you feel something, connect to the people in the room, and attach meaning to the whole of it.</p>
+      <p class="body" style="margin-bottom:1.6rem;">That question became my dissertation, and then it became Resonance Co. This space was built for planners who see an event as more than a series of logistics, but as an opportunity to tell a story through the medium of an experience. If that is the kind of planner you are, or the kind you&rsquo;re becoming, you belong here.</p>
+      <a class="page-link" href="about.html">Read the full story &rarr;</a>
     </div>
-    <!-- Philosophy panel -->
-    <div data-dip="phil" style="padding-left:clamp(2rem,4vw,4.5rem);border-left:1px solid var(--linen);">
-      <div style="margin-bottom:clamp(18px,2.2vw,28px);">
-        <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.Eyebrow" hint-size="200px,20px">On Resonance</x-import>
-      </div>
-      <h2 style="font-family: var(--font-serif); font-weight: 300; font-size: var(--fs-h1); line-height: var(--lh-display); letter-spacing: var(--ls-tight); color: var(--charcoal); margin: 0 0 1.4rem"><span style="color: var(--rose);">Resonance</span> is&nbsp;<em style="font-style: italic;">relational.</em></h2>
-      <p style="font-family:var(--font-serif);font-weight:500;font-size:clamp(17px,1.35vw,18.5px);line-height:1.85;color:var(--ink-2);margin:0 0 1.2rem;">Resonance, in sociology, is a call and response: a genuine engagement between a person and the world around them. My doctoral research carried that idea into how events are designed.</p>
-      <p style="font-family:var(--font-serif);font-weight:500;font-size:clamp(17px,1.35vw,18.5px);line-height:1.85;color:var(--ink-2);margin:0 0 1.2rem;">In our field, resonance emerges from intentional design that shows a deep knowledge of the people in the room, rather than from generic spectacle. The design surfaces the deeper symbolism and meaning already held in the elements of the experience. We build the conditions for it through moments of surprise and delight: a design element that nods to something only these guests would catch. Then we hold those threads while our attendees live out their story inside the experience.</p>
-      
-      <p style="font-family:var(--font-serif);font-weight:500;font-size:clamp(17px,1.35vw,18.5px);line-height:1.85;color:var(--ink-2);margin:0 0 1.6rem;"><i>Resonance Mapping</i> is how we design for that on purpose rather than by instinct alone, along three axes: <em style="font-style: italic;">identity</em>, who is in the room and how they see themselves; <em style="font-style: italic;">experience</em>, how the environment and activities create mental and physical engagement; and <em style="font-style: italic;">story</em>, the arc that moves them through it. Tend all three, and you create the conditions for the kind of event people carry with them, the one they don’t want to leave.</p>
-      <!-- Hidden until the About page is live: <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.PageLink" href="About Resonance Co.dc.html" arrow="right" hint-size="220px,24px">About Resonance Co.</x-import> -->
+    <div class="dip-phil">
+      <span class="eyebrow">On Resonance</span>
+      <h2><span style="color:var(--rose);">Resonance</span> is&nbsp;<em style="font-style:italic;">relational.</em></h2>
+      <p class="body">Resonance, in sociology, is a call and response: a genuine engagement between a person and the world around them. My doctoral research carried that idea into how events are designed.</p>
+      <p class="body">In our field, resonance emerges from intentional design that shows a deep knowledge of the people in the room, rather than from generic spectacle. The design surfaces the deeper symbolism and meaning already held in the elements of the experience. We build the conditions for it through moments of surprise and delight: a design element that nods to something only these guests would catch. Then we hold those threads while our attendees live out their story inside the experience.</p>
+      <p class="body" style="margin-bottom:1.6rem;"><i>Resonance Mapping</i> is how we design for that on purpose rather than by instinct alone, along three axes: <em style="font-style:italic;">identity</em>, who is in the room and how they see themselves; <em style="font-style:italic;">experience</em>, how the environment and activities create mental and physical engagement; and <em style="font-style:italic;">story</em>, the arc that moves them through it. Tend all three, and you create the conditions for the kind of event people carry with them, the one they don&rsquo;t want to leave.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ LACE DIVIDER ============ -->
-<div style="max-width:560px;margin:clamp(36px,6vw,68px) auto clamp(20px,3vw,34px);padding:0 36px;">
-  
-</div>
-
-<!-- ============ STUDENT QUOTES (FADE BAND) ============ -->
-<section data-screen-label="In Their Words" style="background:var(--cream);">
-  <div style="max-width:980px;margin:0 auto;padding:clamp(40px,6vw,78px) clamp(24px,5vw,48px);text-align:center;">
-    <div style="font-family:var(--font-sans);font-weight:300;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:clamp(28px,3.6vw,46px);">In Their Words</div>
-    <div style="display:grid;grid-template-columns:minmax(0,1fr);align-items:center;">
-      <blockquote style="grid-area:1/1;margin:0 auto;max-width:820px;transition:opacity 1s ease;opacity:{{ qq0 }};">
-        <p style="font-family:var(--font-serif);font-style:italic;font-weight:300;font-size:clamp(24px,3vw,38px);line-height:1.32;letter-spacing:var(--ls-tight);color:var(--charcoal);margin:0 0 clamp(20px,2.4vw,30px);">“She made all topics engaging, even finance and legal elements.”</p>
-        <div style="font-family:var(--font-sans);font-weight:300;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);">Student evaluation · 2023</div>
-      </blockquote><x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.LaceDivider" hint-size="600px,90px"></x-import>
-      <blockquote style="grid-area:1/1;margin:0 auto;max-width:820px;transition:opacity 1s ease;opacity:{{ qq1 }};">
-        <p style="font-family:var(--font-serif);font-style:italic;font-weight:300;font-size:clamp(24px,3vw,38px);line-height:1.32;letter-spacing:var(--ls-tight);color:var(--charcoal);margin:0 0 clamp(20px,2.4vw,30px);">“I always loved that she tied in real-world examples from her own experiences as an event planner into our lectures.”</p>
-        <div style="font-family:var(--font-sans);font-weight:300;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);">Student evaluation · 2021</div>
-      </blockquote>
-      <blockquote style="grid-area:1/1;margin:0 auto;max-width:820px;transition:opacity 1s ease;opacity:{{ qq2 }};">
-        <p style="font-family:var(--font-serif);font-style:italic;font-weight:300;font-size:clamp(24px,3vw,38px);line-height:1.32;letter-spacing:var(--ls-tight);color:var(--charcoal);margin:0 0 clamp(20px,2.4vw,30px);">“Rayven was literally one of the best instructors I have had.”</p>
-        <div style="font-family:var(--font-sans);font-weight:300;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);">Student evaluation · 2022</div>
-      </blockquote>
-      <blockquote style="grid-area:1/1;margin:0 auto;max-width:820px;transition:opacity 1s ease;opacity:{{ qq3 }};">
-        <p style="font-family:var(--font-serif);font-style:italic;font-weight:300;font-size:clamp(24px,3vw,38px);line-height:1.32;letter-spacing:var(--ls-tight);color:var(--charcoal);margin:0 0 clamp(20px,2.4vw,30px);">“She genuinely cares about the industry and her students.”</p>
-        <div style="font-family:var(--font-sans);font-weight:300;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);">Student evaluation · 2024</div>
-      </blockquote>
+<!-- ============ STUDENT QUOTES ============ -->
+<section class="quotes">
+  <div class="wrap">
+    <div class="label">In Their Words</div>
+    <div class="qstack">
+      <blockquote><p>&ldquo;She made all topics engaging, even finance and legal elements.&rdquo;</p><footer>Student evaluation &middot; 2023</footer></blockquote>
+      <blockquote><p>&ldquo;I always loved that she tied in real-world examples from her own experiences as an event planner into our lectures.&rdquo;</p><footer>Student evaluation &middot; 2021</footer></blockquote>
+      <blockquote><p>&ldquo;Rayven was literally one of the best instructors I have had.&rdquo;</p><footer>Student evaluation &middot; 2022</footer></blockquote>
+      <blockquote><p>&ldquo;She genuinely cares about the industry and her students.&rdquo;</p><footer>Student evaluation &middot; 2024</footer></blockquote>
+    </div>
+    <div class="lace" aria-hidden="true">
+      <svg viewBox="0 0 600 80" xmlns="http://www.w3.org/2000/svg" role="presentation">
+        <g fill="none" stroke="#DDD4C2" stroke-width="1.1" stroke-linecap="round">
+          <line x1="0" y1="68" x2="600" y2="68" />
+          <path d="M 120 68 A 60 60 0 0 1 240 68" />
+          <path d="M 180 68 A 60 60 0 0 1 300 68" />
+          <path d="M 240 68 A 60 60 0 0 1 360 68" />
+          <path d="M 300 68 A 60 60 0 0 1 420 68" />
+          <path d="M 360 68 A 60 60 0 0 1 480 68" />
+        </g>
+      </svg>
     </div>
   </div>
 </section>
 
 <!-- ============ STAY IN TOUCH ============ -->
-<section data-screen-label="Stay in Touch" id="stay-in-touch" style="background:#EEEBE3;border-top:1px solid var(--linen);border-bottom:1px solid var(--linen);">
-  <div data-grid="stay" style="max-width:1080px;margin:0 auto;padding:clamp(48px,6vw,88px) clamp(20px,5vw,40px);">
-    <div>
-      <div style="margin-bottom:1rem;">
-        <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.Eyebrow" hint-size="200px,20px">Stay in Touch</x-import>
+<section class="stay" id="stay-in-touch">
+  <div class="wrap">
+    <span class="eyebrow">Stay in Touch</span>
+    <p class="thanks" id="stay-thanks">Thank you. We have your note, and we will be in touch. <em>We are glad you are here.</em></p>
+    <form name="stay-in-touch" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="stay-form">
+      <input type="hidden" name="form-name" value="stay-in-touch">
+      <p hidden aria-hidden="true" style="display:none;"><label>Do not fill this out: <input name="bot-field"></label></p>
+      <label class="f-label" for="sn">Your Name</label>
+      <input type="text" id="sn" name="name" placeholder="First and Last" required>
+      <label class="f-label" for="se">Email Address</label>
+      <input type="email" id="se" name="email" required>
+      <span class="f-label" style="margin-bottom:4px;">I&rsquo;d like to&hellip;</span>
+      <label class="opt"><input type="checkbox" name="interest[]" value="Send a message" id="want-msg"><span>Send Resonance Co. a message.</span></label>
+      <label class="opt"><input type="checkbox" name="interest[]" value="Book an education session"><span>Book an education session for my event community.</span></label>
+      <label class="opt"><input type="checkbox" name="interest[]" value="Course launch notifications"><span>Receive an email when new courses are launched.</span></label>
+      <div class="msg-field" id="msg-field">
+        <label class="f-label" for="msg">Your Message</label>
+        <textarea id="msg" name="message" placeholder="Tell us a little about what you have in mind."></textarea>
       </div>
-      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
-        <p style="font-family:var(--font-serif);font-weight:500;font-size:clamp(18px,1.5vw,21px);line-height:1.75;color:var(--charcoal);margin:26px 0 0;max-width:520px;">Thank you. We have your note, and we will be in touch. <em style="font-style:italic;color:var(--muted);">We are glad you are here.</em></p>
-      </sc-if>
-      <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
-      <form name="stay-in-touch" method="POST" data-netlify="true" netlify-honeypot="bot-field" sc-camel-on-submit="{{ onSubmit }}" style="margin-top:26px;max-width:520px;">
-        <input type="hidden" name="form-name" value="stay-in-touch">
-        <p hidden="" aria-hidden="true" style="display:none;"><label>Do not fill this out: <input name="bot-field"></label></p>
-        <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.Field" label="Your Name" type="text" name="name" placeholder="First and Last" hint-size="100%,64px"></x-import>
-        <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.Field" label="Email Address" type="email" name="email" hint-size="100%,64px"></x-import>
-        <div style="font-family:var(--font-sans);font-weight:300;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:24px 0 4px;">I’d like to…</div>
-        <div style="display:flex;flex-direction:column;">
-          <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.CheckOption" name="interest[]" value="Send a message" sc-camel-on-change="{{ toggleMessage }}" hint-size="100%,28px">Send Resonance Co. a message.</x-import>
-          <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.CheckOption" name="interest[]" value="Book an education session" hint-size="100%,28px">Book an education session for my event community.</x-import>
-          <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.CheckOption" name="interest[]" value="Course launch notifications" hint-size="100%,28px">Receive an email when new courses are launched.</x-import>
-        </div>
-        <sc-if value="{{ wantMessage }}" hint-placeholder-val="{{ false }}">
-          <div style="margin-top:6px;">
-            <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.Field" label="Your Message" multiline="1" name="message" placeholder="Tell us a little about what you have in mind." hint-size="100%,150px"></x-import>
-          </div>
-        </sc-if>
-        <div style="margin-top:32px;">
-          <x-import component-from-global-scope="ResonanceCoDesignSystem_58084c.Button" variant="solid" type="submit" hint-size="220px,54px">Send</x-import>
-        </div>
-      </form>
-      </sc-if>
-    </div>
+      <button type="submit">Send</button>
+    </form>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
-<footer style="margin-top:1rem;padding:clamp(40px,6vw,72px) 1.5rem clamp(30px,4vw,48px);text-align:center;border-top:1px solid var(--linen);">
-  <div style="font-family:var(--font-serif);font-size:clamp(22px,2.4vw,30px);font-weight:400;letter-spacing:.01em;display:inline-block;border-bottom:1px solid var(--charcoal);padding-bottom:6px;">RESONANCE <span style="font-weight:300;">Co.</span></div>
-  <div style="font-family:var(--font-serif);font-style:italic;color:var(--muted);margin-top:8px;font-size:16px;font-weight:500;">Event Education &amp; Strategy</div>
-  <div style="display:flex;gap:20px;justify-content:center;margin-top:20px;">
-    <a href="https://www.instagram.com/resonancecoevents" aria-label="Instagram" target="_blank" rel="noopener" style="color:var(--muted);display:inline-flex;"><svg sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="width:21px;height:21px;"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
-    <a href="https://www.tiktok.com/@resonancecoevents" aria-label="TikTok" target="_blank" rel="noopener" style="color:var(--muted);display:inline-flex;"><svg sc-camel-view-box="0 0 24 24" fill="currentColor" style="width:21px;height:21px;"><path d="M16.5 3c.3 2 1.6 3.5 3.5 3.8v2.4c-1.3 0-2.5-.4-3.5-1.1v6.4a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.5a3.1 3.1 0 1 0 2.2 3V3h2.6z"></path></svg></a>
-  </div>
-  <div style="font-family:var(--font-sans);font-weight:300;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:22px;">© 2026 Resonance Co. All rights reserved.</div>
-</footer>
-</x-dc>
-<!-- Netlify Forms detection copy: pure static HTML the deploy bot scans. Kept outside <x-dc> so the app runtime never renders it; display:none keeps it invisible. -->
-<form name="stay-in-touch" data-netlify="true" netlify-honeypot="bot-field" style="display:none;" aria-hidden="true">
-  <input type="text" name="name">
-  <input type="email" name="email">
-  <input type="checkbox" name="interest[]" value="Send a message">
-  <input type="checkbox" name="interest[]" value="Book an education session">
-  <input type="checkbox" name="interest[]" value="Course launch notifications">
-  <textarea name="message"></textarea>
-  <input name="bot-field">
-</form>
-<template id="__bundler_thumbnail">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F4F3EF"></rect><text x="50" y="49" font-family="Georgia,'Times New Roman',serif" font-size="9.5" letter-spacing="0.5" fill="#2A2520" text-anchor="middle">RESONANCE Co.</text><rect x="33" y="53" width="34" height="0.6" fill="#2A2520"></rect><text x="50" y="61" font-family="Georgia,'Times New Roman',serif" font-size="4.4" font-style="italic" fill="#6B5F52" text-anchor="middle">Event Education &amp; Strategy</text></svg>
-</template>
-<script type="text/x-dc" data-dc-script="">
-class Component extends DCLogic {
-  state = { wantMessage: false, rotorIndex: 0, quoteIndex: 0, submitted: false };
-  componentDidMount() {
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      document.documentElement.classList.add('revealed');
-    }));
-    // Bulletproof fallback: if the animation/transition clock never runs in
-    // this environment, force the resting (visible) state with no transition.
-    this._revealFallback = setTimeout(() => {
-      document.querySelectorAll('[data-rise],[data-ghost]').forEach((el) => {
-        el.style.transition = 'none';
-        el.style.opacity = '1';
-        el.style.transform = 'none';
-      });
-    }, 1100);
-    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!reduce) {
-      this._rotor = setInterval(() => {
-        this.setState((s) => ({ rotorIndex: (s.rotorIndex + 1) % 3 }));
-      }, 3400);
-      this._quoteRotor = setInterval(() => {
-        this.setState((s) => ({ quoteIndex: (s.quoteIndex + 1) % 4 }));
-      }, 5200);
-    }
-    // Scroll-reveal for the transition beats.
-    const revealEls = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
-    if (reduce || !('IntersectionObserver' in window)) {
-      revealEls.forEach((el) => el.classList.add('shown'));
-    } else {
-      this._io = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('shown');
-            this._io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
-      revealEls.forEach((el) => {
-        if (el.getBoundingClientRect().top < window.innerHeight * 0.88) {
-          el.classList.add('shown'); // already in view on load
-        } else {
-          this._io.observe(el); // reveal as it scrolls into view
-        }
-      });
-      // Safety net: never leave a beat permanently hidden.
-      this._revealSafety = setTimeout(() => {
-        revealEls.forEach((el) => el.classList.add('shown'));
-      }, 6000);
-    }
+<script>
+(function(){
+  // reveal-on-scroll
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(el){ el.classList.add('shown'); }); }
+  else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('shown'); io.unobserve(en.target); } });
+    }, { threshold:0.2, rootMargin:'0px 0px -10% 0px' });
+    els.forEach(function(el){
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.88) el.classList.add('shown');
+      else io.observe(el);
+    });
+    setTimeout(function(){ els.forEach(function(el){ el.classList.add('shown'); }); }, 6000);
   }
-  componentWillUnmount() {
-    clearTimeout(this._revealFallback);
-    clearTimeout(this._revealSafety);
-    if (this._io) this._io.disconnect();
-    if (this._ro) this._ro.disconnect();
-    clearInterval(this._rotor);
-    clearInterval(this._quoteRotor);
-  }
-  computeLace = () => {
-    const grid = this._gridRef;
-    if (!grid) return;
-    const gap = 1, cols = 3;
-    const W = grid.clientWidth;
-    if (!W) return;
-    const cardW = (W - gap * (cols - 1)) / cols;
-    const r = 22;              // half-circle radius
-    const nCirc = 4;           // four overlapping half-circles
-    const ext = 26;            // rail overhang past the outer circle edges (2x)
-    const circlesW = (nCirc + 1) * r; // edge-to-edge span at 50% overlap (spacing = r)
-    const railW = circlesW + ext * 2;
-    const T = 12;              // rail (baseline) y
-    const bottom = T + r;      // half-circles hang to here
-    let arcs = '';
-    const railRects = [];
-    for (let c = 0; c < cols; c++) {
-      const left = c * (cardW + gap);
-      const cardCenter = left + cardW / 2;
-      const railLeft = cardCenter - railW / 2;
-      railRects.push({ left: Math.round(railLeft), width: Math.round(railW) });
-      const c0 = railLeft + ext + r; // first circle center
-      for (let k = 0; k < nCirc; k++) {
-        const cx = c0 + k * r;       // centers spaced by r → 50% overlap
-        arcs += `M${(cx - r).toFixed(2)} ${T} A${r} ${r} 0 0 0 ${(cx + r).toFixed(2)} ${T} `; // full half-circle hanging under the line
-      }
-    }
-    this.setState({ laceD: arcs.trim(), laceW: Math.round(W), laceH: bottom + 2, railTop: T, railRects });
-  };
-  setGridRef = (el) => {
-    this._gridRef = el;
-    if (el) {
-      this.computeLace();
-      if ('ResizeObserver' in window) {
-        this._ro = new ResizeObserver(() => this.computeLace());
-        this._ro.observe(el);
-      }
-    } else if (this._ro) {
-      this._ro.disconnect();
-      this._ro = null;
-    }
-  };
-  renderVals() {
-    const ri = this.state.rotorIndex;
-    const qi = this.state.quoteIndex;
-    const h = React.createElement;
-    // Lace band = short rails (crisp 1px divs, same color as the vertical dividers) + overlapping half-circles.
-    const railTop = this.state.railTop || 12;
-    const laceH = this.state.laceH || 36;
-    const bandInner = () => [
-      h('svg', {
-        key: 'svg',
-        'aria-hidden': 'true',
-        width: this.state.laceW || '100%',
-        height: laceH,
-        xmlns: 'http://www.w3.org/2000/svg',
-        style: { position: 'absolute', top: 0, left: 0, pointerEvents: 'none', overflow: 'visible' }
-      },
-        h('path', { d: this.state.laceD, fill: 'none', stroke: 'var(--linen)', strokeWidth: 1, strokeLinecap: 'round' })
-      ),
-      ...(this.state.railRects || []).map((r, i) => h('div', {
-        key: 'rail' + i,
-        'aria-hidden': 'true',
-        style: { position: 'absolute', top: railTop + 'px', left: r.left + 'px', width: r.width + 'px', height: '1px', background: 'var(--linen)' }
-      }))
-    ];
-    const band = (place) => h('div', {
-      key: place,
-      'aria-hidden': 'true',
-      style: { position: 'absolute', left: 0, right: 0, height: laceH + 'px', pointerEvents: 'none', zIndex: 3,
-        ...(place === 'top' ? { top: 0 } : { bottom: 0, transform: 'scaleY(-1)' }) }
-    }, bandInner());
-    const laceBand = this.state.laceD ? h(React.Fragment, null, band('top'), band('bottom')) : null;
-    return {
-      laceBand,
-      setGridRef: this.setGridRef,
-      o0: ri === 0 ? 1 : 0,
-      o1: ri === 1 ? 1 : 0,
-      o2: ri === 2 ? 1 : 0,
-      qq0: qi === 0 ? 1 : 0,
-      qq1: qi === 1 ? 1 : 0,
-      qq2: qi === 2 ? 1 : 0,
-      qq3: qi === 3 ? 1 : 0,
-      wantMessage: this.state.wantMessage,
-      submitted: this.state.submitted,
-      notSubmitted: !this.state.submitted,
-      toggleMessage: (e) => this.setState({ wantMessage: e.target.checked }),
-      onSubmit: (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const data = new FormData(form);
-        const body = new URLSearchParams();
-        data.forEach((v, k) => body.append(k, v));
-        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
-          .then(() => this.setState({ submitted: true }))
-          .catch(() => this.setState({ submitted: true }));
-      },
-    };
-  }
-}
+  // message toggle
+  var cb = document.getElementById('want-msg'), mf = document.getElementById('msg-field');
+  if (cb && mf) cb.addEventListener('change', function(){ mf.classList.toggle('open', cb.checked); });
+  // inline-thanks submit
+  var form = document.getElementById('stay-form'), thanks = document.getElementById('stay-thanks');
+  if (form && thanks) form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var body = new URLSearchParams(new FormData(form)).toString();
+    fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: body })
+      .then(function(){ form.style.display='none'; thanks.style.display='block'; })
+      .catch(function(){ form.style.display='none'; thanks.style.display='block'; });
+  });
+})();
 </script>
 
-
-</body></html>
+<footer class="site-footer"><div class="fwm">RESONANCE <span>Co.</span></div><div class="ftag">Event Education &amp; Strategy</div><div class="socials"><a href="https://www.instagram.com/resonancecoevents" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@resonancecoevents" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2 1.6 3.5 3.5 3.8v2.4c-1.3 0-2.5-.4-3.5-1.1v6.4a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.5a3.1 3.1 0 1 0 2.2 3V3h2.6z"/></svg></a></div><div class="flegal">&copy; 2026 Resonance Co. All rights reserved.</div></footer>
+</body>
+</html>
