@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chapter Programs &amp; Education &middot; Rayven Crisafulli, PhD, CMP &middot; Resonance Co.</title>
+<meta name="description" content="Educational programming for chapter meetings, lunch and learns, and regional conferences, with Rayven Crisafulli, PhD, CMP.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.sp *, .sp *::before, .sp *::after { box-sizing:border-box; margin:0; padding:0; }
+.sp { background:#F4F3EF; color:#2A2520; font-family:'Cormorant Garamond',serif; font-weight:400; -webkit-font-smoothing:antialiased; }
+.sp .wrap { max-width:1080px; margin:0 auto; padding:clamp(64px,9vw,120px) 2.5rem; }
+.sp .eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); }
+.sp .body-p { font-weight:500; font-size:18px; line-height:1.85; color:#2A2520; max-width:40em; }
+
+/* ===== masthead (home-page pattern, cycler H1) ===== */
+@keyframes spRise{ from{ opacity:0; transform:translateY(12px); } to{ opacity:1; transform:none; } }
+@keyframes spGhost{ from{ opacity:0; } to{ opacity:1; } }
+@keyframes spCycle{ 0%{ opacity:0; } 4.5%{ opacity:1; } 29%{ opacity:1; } 33.3%{ opacity:0; } 100%{ opacity:0; } }
+.sp-mast{ position:relative; overflow:hidden; }
+.sp-mast .mwrap{ max-width:1080px; margin:0 auto; padding:clamp(40px,6vw,84px) clamp(24px,5vw,48px) clamp(32px,5vw,56px); position:relative; }
+.sp-mast .backdrop{ position:absolute; left:0; right:0; top:0; pointer-events:none; z-index:0; overflow:hidden; }
+.sp-mast .arches-wrap{ position:relative; width:100%; padding-bottom:60.83%; }
+.sp-mast .arches{ position:absolute; top:0; left:0; width:100%; height:100%; display:block; opacity:.62; }
+.sp-mast .ghost{ animation:spGhost 1.4s ease .1s both; }
+.sp-mast .r0{ animation:spRise .7s ease both; }
+.sp-mast .r2{ animation:spRise .9s ease .28s both; }
+.sp-mast .inner{ position:relative; z-index:1; max-width:820px; margin:0 auto; text-align:center; padding-top:clamp(48px,9vw,128px); }
+.sp-mast .inner .eyebrow{ display:block; margin-bottom:clamp(20px,3vw,30px); letter-spacing:.3em; font-size:12.5px; }
+.sp-mast .cycler{ position:relative; min-height:2.42em; font-weight:300; font-size:clamp(34px,5.2vw,62px); line-height:1.14; letter-spacing:-.006em; color:var(--charcoal); }
+.sp-mast .cycler span{ position:absolute; left:0; right:0; top:50%; transform:translateY(-50%); opacity:0; animation:spCycle 16s ease infinite; }
+.sp-mast .cycler span:nth-child(2){ animation-delay:5.33s; }
+.sp-mast .cycler span:nth-child(3){ animation-delay:10.66s; }
+.sp-mast .cycler em{ font-style:italic; }
+.sp-mast .furniture{ font-weight:500; font-size:clamp(16px,1.5vw,19px); line-height:1.8; color:var(--ink-2); max-width:34em; margin:clamp(22px,3vw,34px) auto 0; }
+@media (prefers-reduced-motion:reduce){
+  .sp-mast .ghost,.sp-mast .r0,.sp-mast .r2{ animation:none; opacity:1; transform:none; }
+  .sp-mast .cycler span{ animation:none; }
+  .sp-mast .cycler span:first-child{ opacity:1; }
+}
+
+/* ===== framework ===== */
+.sp-framework h2{ font-weight:300; font-size:clamp(28px,3.6vw,42px); line-height:1.14; letter-spacing:.01em; margin-bottom:clamp(2.2rem,4vw,3.6rem); }
+.sp-framework h2 em{ font-style:italic; }
+.sp-framework .fw-spread{ display:grid; grid-template-columns:1.6fr 1fr; gap:clamp(2rem,5vw,5rem); align-items:start; }
+.sp-framework .fw-pull{ position:relative; align-self:stretch; display:flex; align-items:center; justify-content:center; min-height:340px; padding:clamp(28px,4vw,52px) clamp(20px,3vw,44px); }
+.sp-framework .fw-pull .bay{ position:absolute; inset:0; display:block; pointer-events:none; }
+.sp-framework .fw-pull .bay svg{ display:block; width:100%; height:100%; }
+.sp-framework .fw-pull p{ position:relative; font-weight:300; font-size:clamp(24px,3vw,36px); line-height:1.3; letter-spacing:-.004em; color:var(--charcoal); text-align:center; max-width:12em; }
+.sp-framework .fw-pull p em{ font-style:italic; }
+.sp-framework .fw-cycle{ width:100%; max-width:none; }
+.sp-framework .fw-cycle .wcyc{ position:relative; display:block; height:1.2em; }
+.sp-framework .fw-cycle .wcyc em{ position:absolute; left:0; right:0; top:0; opacity:0; }
+@keyframes fwW1{ 0%{ opacity:0; } 4%,21%{ opacity:1; } 25%,100%{ opacity:0; } }
+@keyframes fwW2{ 0%,25%{ opacity:0; } 29%,46%{ opacity:1; } 50%,100%{ opacity:0; } }
+@keyframes fwW3{ 0%,50%{ opacity:0; } 54%,96%{ opacity:1; } 100%{ opacity:0; } }
+.sp-framework .fw-cycle .w1{ animation:fwW1 16s ease infinite; }
+.sp-framework .fw-cycle .w2{ animation:fwW2 16s ease infinite; }
+.sp-framework .fw-cycle .w3{ animation:fwW3 16s ease infinite; }
+@media (prefers-reduced-motion:reduce){
+  .sp-framework .fw-cycle .wcyc em{ animation:none; }
+  .sp-framework .fw-cycle .w1{ opacity:1; }
+}
+.sp-framework .fw-col .fw-row{ margin-bottom:clamp(24px,3.2vw,40px); }
+.sp-framework .fw-col .fw-row:last-child{ margin-bottom:0; }
+.sp-framework .mnote{ display:block; font-style:italic; font-weight:400; font-size:17px; line-height:1.5; color:var(--muted); margin-bottom:.5rem; }
+.sp-framework .fw-row p{ font-weight:500; font-size:17px; line-height:1.8; color:#2A2520; max-width:34em; }
+
+/* ===== founder spread ===== */
+.sp-founder{ border-top:1px solid var(--linen); }
+.sp-founder .eyebrow{ display:block; margin-bottom:2rem; }
+.sp-founder .spread{ display:grid; grid-template-columns:1fr 31%; gap:clamp(2.5rem,5vw,5rem); align-items:start; }
+.sp-founder .bio p{ font-weight:500; font-size:18px; line-height:1.85; color:#2A2520; margin-bottom:1.4em; }
+.sp-founder .bio p:last-child{ margin-bottom:0; }
+.sp-founder .bio p:first-child::first-letter{ float:left; font-weight:500; font-size:4.2em; line-height:.82; margin:.06em .10em -.05em 0; }
+.sp-founder .portrait img{ width:100%; aspect-ratio:4/5; object-fit:cover; object-position:50% 20%; border:1px solid var(--linen); }
+.sp-founder .portrait .cap{ font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); line-height:1.85; margin-top:1.1rem; padding-left:1.1rem; }
+.sp-founder .portrait .cap .credit{ display:block; font-size:9.5px; letter-spacing:.16em; color:var(--faint); margin-top:.6rem; }
+
+/* ===== lace divider ===== */
+.sp .lace-divider { max-width:600px; margin:0 auto; padding:clamp(20px,3vw,36px) 36px; }
+.sp .lace-divider svg { display:block; width:100%; height:auto; }
+
+/* ===== see the work ===== */
+.sp-work .eyebrow { display:block; margin-bottom:2rem; }
+.sp-work .sub-label { display:block; font-family:'Jost',sans-serif; font-weight:400; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); margin-bottom:1.4rem; }
+.sp-work .press-lede { text-align:center; font-weight:300; font-style:italic; font-size:clamp(17px,1.7vw,20px); line-height:1.6; color:var(--ink-2); margin:0 auto clamp(2.75rem,4.5vw,4rem); max-width:34em; }
+.sp-work .subbeat { display:flex; align-items:baseline; justify-content:space-between; gap:1rem; margin-bottom:1.4rem; }
+.sp-work .subbeat .sub-label { margin-bottom:0; }
+.sp-work .sub-desc { font-style:italic; font-weight:500; font-size:14px; color:var(--ink-2); text-align:right; }
+.sp-work .room-beat { margin-top:clamp(3rem,5.5vw,5rem); padding-top:clamp(2.5rem,4vw,3.25rem); border-top:1px solid var(--linen); }
+.sp-work .press-featured { margin-bottom:clamp(2.75rem,4.5vw,4rem); }
+.sp-work .press-featured .video-frame { max-width:820px; }
+.sp-work .press-row { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; max-width:820px; }
+.sp-work .room { display:grid; grid-template-columns:5fr 4fr; gap:clamp(2.5rem,5vw,5rem); align-items:center; }
+.sp-work .room blockquote { font-weight:300; font-style:italic; font-size:clamp(21px,2.3vw,27px); line-height:1.5; letter-spacing:.01em; color:var(--charcoal); margin:0 0 1.2rem; }
+.sp-work .room blockquote .fill { color:var(--faint); }
+.sp-work .room .q-cap { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); line-height:1.8; }
+.sp-work .video-frame { aspect-ratio:16/9; border:1px solid var(--linen); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.75rem; background:#EEEBE3; }
+.sp-work .video-frame .vf-label { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
+.sp-work .video-frame .vf-note { font-style:italic; font-weight:400; font-size:14px; color:var(--faint); }
+.sp-work .video-cap { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); line-height:1.8; margin-top:.9rem; }
+.sp-work .video-cap a { color:var(--charcoal); text-decoration:none; border-bottom:1px solid var(--linen); padding-bottom:1px; transition:color .2s ease,border-color .2s ease; }
+.sp-work .video-cap a:hover { color:var(--rose); border-color:var(--rose); }
+.sp-work .video-cap .fill { color:var(--faint); font-style:italic; text-transform:none; letter-spacing:.06em; }
+.sp-work .video-frame.live { display:block; background:#2A2520; position:relative; }
+.sp-work .video-frame.live video { display:block; width:100%; height:100%; object-fit:contain; }
+.sp-work .video-frame.live .vf-play { position:absolute; inset:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:transparent; border:0; cursor:pointer; padding:0; }
+.sp-work .video-frame.live .vf-play span { display:flex; align-items:center; justify-content:center; width:64px; height:64px; border:1px solid #F4F3EF; background:rgba(42,37,32,.35); transition:background .25s ease; }
+.sp-work .video-frame.live .vf-play span::after { content:""; display:block; margin-left:4px; border-style:solid; border-width:9px 0 9px 15px; border-color:transparent transparent transparent #F4F3EF; }
+.sp-work .video-frame.live .vf-play:hover span { background:rgba(42,37,32,.6); }
+
+
+/* ===== featured sessions ===== */
+.sp-sessions .section-head { margin-bottom:4rem; text-align:center; }
+.sp-work .section-head { margin-bottom:1.1rem; text-align:center; }
+.sp-sessions .section-head .line1, .sp-work .section-head .line1 { display:block; font-size:clamp(22px,2.8vw,32px); font-weight:300; font-style:italic; letter-spacing:.01em; line-height:1.1; }
+.sp-sessions .section-head .line2, .sp-work .section-head .line2 { display:block; font-size:clamp(38px,5vw,58px); font-weight:300; letter-spacing:.06em; text-transform:uppercase; line-height:1; }
+.sp-sessions .card-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-bottom:3.5rem; }
+.sp-sessions .card { border-top:1px solid var(--linen); padding:1.75rem 0 0 1.25rem; display:flex; flex-direction:column; }
+.sp-sessions .card.a-01 { box-shadow:inset 3px 0 0 var(--rose); }
+.sp-sessions .card.a-02 { box-shadow:inset 3px 0 0 #5570A0; }
+.sp-sessions .card.a-03 { box-shadow:inset 3px 0 0 #D4922A; }
+.sp-sessions .card.a-06 { box-shadow:inset 3px 0 0 #6E7E28; }
+.sp-sessions .card .n { font-family:'Jost',sans-serif; font-weight:400; font-size:12px; letter-spacing:.15em; color:var(--muted-2); margin-bottom:.9rem; }
+.sp-sessions .card h3 { font-weight:300; font-size:clamp(22px,2.2vw,27px); line-height:1.18; letter-spacing:.01em; margin-bottom:.6rem; }
+.sp-sessions .card .avail { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; letter-spacing:.06em; color:var(--muted-2); line-height:1.6; margin-bottom:1.1rem; }
+.sp-sessions .card p { font-weight:500; font-size:16.5px; line-height:1.8; color:var(--ink-2); margin-bottom:1.25rem; }
+.sp-sessions .card .more { margin-top:auto; font-family:'Jost',sans-serif; font-weight:400; font-size:12px; letter-spacing:.2em; text-transform:uppercase; text-decoration:none; color:var(--charcoal); border-bottom:1px solid var(--linen); padding-bottom:2px; align-self:flex-start; transition:color .2s ease,border-color .2s ease; }
+.sp-sessions .card .more:hover { color:var(--rose); border-color:var(--rose); }
+.sp-sessions .catalog-link { text-align:center; }
+.sp-sessions .catalog-link a { font-family:'Jost',sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; text-transform:uppercase; text-decoration:none; color:var(--charcoal); border-bottom:1px solid var(--charcoal); padding-bottom:2px; transition:color .2s ease,border-color .2s ease; }
+.sp-sessions .catalog-link a:hover { color:var(--rose); border-color:var(--rose); }
+
+/* ===== quotes ===== */
+.sp-quotes { border-top:1px solid var(--linen); }
+.sp-quotes .eyebrow { display:block; margin-bottom:2.5rem; }
+.sp-quotes blockquote { border-left:1px solid var(--linen); padding-left:2rem; margin-bottom:2.5rem; max-width:44em; }
+.sp-quotes blockquote p { font-weight:400; font-size:clamp(19px,1.8vw,22px); font-style:italic; line-height:1.7; color:#2A2520; margin-bottom:.75rem; }
+.sp-quotes blockquote cite { font-family:'Jost',sans-serif; font-weight:300; font-style:normal; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); }
+.sp-quotes .factline { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); line-height:2; border-top:1px solid var(--linen); padding-top:1.5rem; margin-top:3rem; }
+
+/* ===== practical details ===== */
+.sp-details { border-top:1px solid var(--linen); }
+.sp-details .eyebrow { display:block; margin-bottom:2rem; }
+.sp-details .specline { font-family:'Jost',sans-serif; font-weight:300; font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-2); line-height:2.3; max-width:52em; margin-bottom:2.25rem; }
+.sp-details .dl-row { display:flex; flex-wrap:wrap; gap:1.25rem; }
+.sp-details .dl-btn { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; letter-spacing:.2em; text-transform:uppercase; text-decoration:none; color:var(--charcoal); border:1px solid var(--charcoal); padding:14px 26px; display:inline-block; transition:background .25s,color .25s; }
+.sp-details .dl-btn:hover { background:var(--charcoal); color:var(--cream); }
+
+/* ===== close ===== */
+.sp-close { max-width:760px; margin:0 auto; padding:clamp(54px,8vw,104px) clamp(20px,5vw,40px); text-align:center; border-top:1px solid var(--linen); }
+.sp-close .eyebrow { margin-bottom:16px; }
+.sp-close h2 { font-weight:300; font-size:clamp(30px,4vw,46px); line-height:1.12; letter-spacing:.01em; margin-bottom:32px; }
+.sp-close h2 em { font-style:italic; }
+.sp-close .contact-btn { font-family:'Jost',sans-serif; font-weight:300; font-size:12px; letter-spacing:.2em; text-transform:uppercase; text-decoration:none; color:var(--charcoal); border:1px solid var(--charcoal); padding:15px 30px; display:inline-block; transition:background .25s,color .25s; }
+.sp-close .contact-btn:hover { background:var(--charcoal); color:var(--cream); }
+
+@media (max-width:760px) {
+  .sp .wrap { padding:3rem 1.5rem; }
+  .sp-mast .cycler { min-height:2.42em; }
+  .sp-founder .spread { grid-template-columns:1fr; gap:2.5rem; }
+  .sp-framework .fw-spread { grid-template-columns:1fr; gap:2.2rem; }
+  .sp-founder .portrait { max-width:300px; order:-1; }
+  .sp-work .video-grid { grid-template-columns:1fr; gap:2rem; }
+  .sp-sessions .card-grid { grid-template-columns:1fr; }
+  .sp-quotes blockquote { padding-left:1.25rem; }
+}
+</style>
+</head>
+<body>
+<header class="site-nav"><a class="brand" href="index.html"><span class="wm">RESONANCE <span>Co.</span></span><em>Event Education &amp; Strategy</em></a><nav class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="for-event-communities.html">For Event Communities</a></nav></header>
+
+<div class="sp">
+
+  <!-- ===== HERO ===== -->
+  <section class="sp-mast">
+    <div class="mwrap">
+      <div class="backdrop ghost" aria-hidden="true">
+        <div class="arches-wrap">
+          <svg class="arches" viewBox="0 0 600 365" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <g fill="none" stroke="#DDD4C2" stroke-width="1.25" stroke-linecap="round" opacity="0.4">
+              <line x1="21" y1="25" x2="21" y2="365" />
+              <line x1="579" y1="25" x2="579" y2="365" />
+              <line x1="207" y1="195" x2="207" y2="365" />
+              <line x1="393" y1="195" x2="393" y2="365" />
+              <path d="M 21 195 A 186 186 0 0 1 114 34 A 186 186 0 0 1 207 195 A 186 186 0 0 1 300 34 A 186 186 0 0 1 393 195 A 186 186 0 0 1 486 34 A 186 186 0 0 1 579 195" />
+              <path d="M 0 10 A 186 186 0 0 1 207 195" />
+              <path d="M 21 195 A 186 186 0 0 1 393 195" />
+              <path d="M 207 195 A 186 186 0 0 1 579 195" />
+              <path d="M 393 195 A 186 186 0 0 1 600 10" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="inner">
+        <span class="eyebrow wide r0">Chapter Programs &amp; Education</span>
+        <h1 class="cycler" aria-label="The session worth the lunch hour. The session worth the drive. The session worth the renewal.">
+          <span>The session worth the <em>lunch hour.</em></span>
+          <span>The session worth the <em>drive.</em></span>
+          <span>The session worth the <em>renewal.</em></span>
+        </h1>
+        <p class="furniture r2">Educational programming for chapter meetings, lunch and learns, and regional conferences. Customized to your members and the events they run, with practical frameworks, resources for their next event, and a new way of seeing the work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FROM THE FOUNDER ===== -->
+  <section class="sp-founder">
+    <div class="wrap">
+      <span class="eyebrow">From the Founder</span>
+      <div class="spread">
+        <div class="bio">
+          <p>Events have been my work for thirteen years, and the first seven looked a lot like yours: lead conference planner for a continuing education department at a top medical university, building agendas, briefing speakers, and reading post-con surveys for audiences who did not grade on a curve. I started a wedding company along the way (I have never been good at free time), then spent five years teaching event management. Underneath all of it sat the same question: why do some events energize and empower their audience while others seem to fall flat?</p>
+          <p>That question drove my doctoral research, and the answer became the framework I teach: resonance, the pattern running beneath the events people carry with them. The framework is new; the way I deliver it is not. It's the teaching style I've spent fourteen semesters honing in front of the toughest audience I know, undergraduates at 9 a.m.</p>
+          <p>Chapter rooms are my favorite place to teach it. The members who give a lunch hour to their own education are already the ones who treat this work as craft, the ones who feel the difference between an event with good logistics and an event with real impact, before there are words for it. This was built for those rooms.</p>
+        </div>
+        <div class="portrait">
+          <img src="assets/Rayven-Crisafulli-PhD-CMP-founder-Resonance-Co.jpg" alt="Rayven Crisafulli, PhD, CMP, founder of Resonance Co.">
+          <p class="cap">Rayven Crisafulli, PhD, CMP<br>Founder, Resonance Co.<span class="credit">Portrait &middot; Shaina Finkle</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IN THEIR WORDS ===== -->
+  <section class="sp-quotes">
+    <div class="wrap">
+      <span class="eyebrow">In Their Words</span>
+      <blockquote>
+        <p>"Her storytelling made me feel connected to the subject matter and to her, and working with her while planning the event made me feel more connected to the industry as a whole."</p>
+        <cite>Student evaluation &middot; 2021</cite>
+      </blockquote>
+      <blockquote>
+        <p>"She genuinely cares about the industry and her students."</p>
+        <cite>Student evaluation &middot; 2024</cite>
+      </blockquote>
+      <p class="factline">Fourteen semesters &middot; University of Florida &middot; Instructor ratings 4.4&ndash;4.96, at or above college means</p>
+    </div>
+  </section>
+
+
+  <!-- ===== LACE ===== -->
+  <div class="lace-divider" aria-hidden="true">
+    <svg viewBox="0 0 600 70" xmlns="http://www.w3.org/2000/svg" role="presentation">
+      <g fill="none" stroke="#DDD4C2" stroke-width="1" stroke-linecap="round">
+        <line x1="0" y1="60" x2="600" y2="60" />
+        <path d="M 100 60 A 50 50 0 0 1 200 60" />
+        <path d="M 150 60 A 50 50 0 0 1 250 60" />
+        <path d="M 200 60 A 50 50 0 0 1 300 60" />
+        <path d="M 250 60 A 50 50 0 0 1 350 60" />
+        <path d="M 300 60 A 50 50 0 0 1 400 60" />
+        <path d="M 350 60 A 50 50 0 0 1 450 60" />
+        <path d="M 400 60 A 50 50 0 0 1 500 60" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- ===== FRAMEWORK ===== -->
+  <section class="sp-framework">
+    <div class="wrap">
+      <div class="fw-spread">
+        <div class="fw-pull">
+          <span class="bay" aria-hidden="true"><svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="presentation"><g fill="none" stroke="#DDD4C2" stroke-width="1.1" stroke-linecap="round" opacity="0.4"><circle cx="215" cy="200" r="170"></circle><circle cx="385" cy="200" r="170"></circle></g></svg></span>
+          <p class="fw-cycle" aria-label="Engagement is designed. Connection is designed. Resonance is designed.">
+            <span class="wcyc"><em class="w1">Engagement</em><em class="w2">Connection</em><em class="w3">Resonance</em></span>is designed.
+          </p>
+        </div>
+        <div class="fw-col">
+          <div class="fw-row">
+            <span class="mnote">what resonance is</span>
+            <p>Resonance, in my research, is what happens when event design shows a deep knowledge of the people in the room: guests feel recognized, and they answer back with attention, laughter, sometimes tears (the tears are usually at weddings).</p>
+          </div>
+          <div class="fw-row">
+            <span class="mnote">how I design a session</span>
+            <p>Association education runs on the same exchange, so I design sessions the way I teach planners to design events: from the members out. I want to know who they are, what events they run, and what tools they need to do their job better before I draft a single slide. Each session opens with a story from the field, works one idea through the room in discussion, and closes with a framework members carry into their next event. The discussion is part of the design: members trading problems and recognizing their own Tuesdays in each other's stories is half of what a chapter meeting is for.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED SESSIONS ===== -->
+  <section class="sp-sessions">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="line1">what it looks like at your chapter</span>
+        <span class="line2">Featured Sessions</span>
+      </div>
+      <div class="card-grid">
+        <div class="card a-01">
+          <div class="n">01 &middot; The Methodology</div>
+          <h3>Designing for Resonance</h3>
+          <div class="avail">Keynote or workshop &middot; Meeting &amp; Event Design, Strategic Planning</div>
+          <p>The flagship. Introduces Resonance Mapping, the framework behind Resonance Co.'s curriculum (identity, experience architecture, flow state and narrative), and makes the case that resonance is both the material planners design in and a result they can measure. Experienced planners walk out with a repeatable system for what they have been doing on instinct.</p>
+          <a class="more" href="for-event-communities.html#topic-01">Full description &rarr;</a>
+        </div>
+        <div class="card a-02">
+          <div class="n">02 &middot; The Research</div>
+          <h3>The Science Behind the Event Experience</h3>
+          <div class="avail">Keynote or workshop &middot; Meeting &amp; Event Design</div>
+          <p>The evidence base. Walks through the research behind resonance and how guests actually experience events: what gets noticed, what gets remembered, and why some moments imprint while others evaporate. For audiences who want the why before the how.</p>
+          <a class="more" href="for-event-communities.html#topic-02">Full description &rarr;</a>
+        </div>
+        <div class="card a-03">
+          <div class="n">03 &middot; The Argument</div>
+          <h3>Grounded by Design</h3>
+          <div class="avail">Keynote or workshop &middot; Meeting &amp; Event Design, Stakeholder Management</div>
+          <p>The contrarian session, argued with evidence. A decade of chasing "elevated" has produced beautiful, interchangeable events nobody remembers. Attendees leave with a framework for separating design that provides spectacle for an audience from design that speaks to one, and practical language for steering clients away from trend-driven briefs.</p>
+          <a class="more" href="for-event-communities.html#topic-03">Full description &rarr;</a>
+        </div>
+      </div>
+      <div class="catalog-link"><a href="for-event-communities.html#topics">View the full session catalog &rarr;</a></div>
+    </div>
+  </section>
+
+  <!-- ===== THE PRACTICAL DETAILS ===== -->
+  <section class="sp-details">
+    <div class="wrap">
+      <span class="eyebrow">The Practical Details</span>
+      <p class="specline">Lunch and learn, 45-minute program with discussion, breakout, or Zoom room &middot; Materials two weeks ahead &middot; My own deck and handouts &middot; Standard AV &middot; Ends on time</p>
+      <div class="dl-row">
+        <a class="dl-btn" href="assets/speaker-one-pager.pdf">Speaker One-Pager (PDF)</a>
+        <a class="dl-btn" href="assets/rayven-crisafulli-headshots.zip">Headshots</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IN THE PRESS ===== -->
+  <section class="sp-work">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="line1">In the</span>
+        <span class="line2">Press</span>
+      </div>
+      <p class="press-lede">Talking about crafting events on air, in print, and online.</p>
+
+      <div class="subbeat"><span class="sub-label">Broadcast</span><span class="sub-desc">On the micro-wedding trend, and why it is here to stay.</span></div>
+      <div class="press-featured">
+        <div class="video-frame live"><video preload="metadata" playsinline poster="assets/press-news4jax-microweddings.jpg"><source src="assets/press-news4jax-microweddings.mp4" type="video/mp4"></video><button class="vf-play" type="button" aria-label="Play video"><span></span></button></div>
+        <p class="video-cap">News4Jax &middot; The Morning Show &middot; Micro weddings &middot; September 2025<br><a href="https://www.news4jax.com/video/news/morning-show/2025/09/16/pandemic-s-micro-wedding-trend-isn-t-going-away-anytime-soon/" target="_blank" rel="noopener">Full segment on News4Jax &rarr;</a></p>
+      </div>
+      <div class="press-row">
+        <div>
+          <div class="video-frame live"><video preload="metadata" playsinline poster="assets/press-fox35-microweddings.jpg"><source src="assets/press-fox35-microweddings.mp4" type="video/mp4"></video><button class="vf-play" type="button" aria-label="Play video"><span></span></button></div>
+          <p class="video-cap">Fox 35 Orlando &middot; Micro weddings &middot; September 2025<br><a href="https://www.fox35orlando.com/video/1708424" target="_blank" rel="noopener">Full segment on Fox 35 &rarr;</a></p>
+        </div>
+        <div>
+          <div class="video-frame live"><video preload="metadata" playsinline poster="assets/press-nbc6-microweddings.jpg"><source src="assets/press-nbc6-microweddings.mp4" type="video/mp4"></video><button class="vf-play" type="button" aria-label="Play video"><span></span></button></div>
+          <p class="video-cap">NBC 6 South Florida &middot; Micro weddings &middot; October 2025<br><a href="https://www.nbcmiami.com/video/nbc-6-news/more-and-more-couples-are-opting-for-micro-weddings-heres-why/3706475/" target="_blank" rel="noopener">Full segment on NBC 6 &rarr;</a></p>
+        </div>
+      </div>
+
+      <div class="subbeat room-beat"><span class="sub-label">From the stage</span><span class="sub-desc">Working one idea through a conference room in Orlando.</span></div>
+      <div class="room">
+        <div>
+          <div class="video-frame live"><video controls preload="metadata" playsinline poster="assets/catersource-2023-people-clip-still.jpg"><source src="assets/catersource-2023-people-clip.mp4" type="video/mp4"><track kind="captions" srclang="en" label="English" src="assets/catersource-2023-people-clip.vtt" default></video></div>
+          <p class="video-cap">Catersource + The Special Event &middot; Orlando &middot; 2023<br>Session &middot; The Science Behind the Event Experience</p>
+        </div>
+        <div>
+          <blockquote>&ldquo;Events give us the opportunity to remove the barriers that keep us separated in our day-to-day lives. You're not thinking about who's a CEO or who makes more money than you. You are here, in the moment, with other people.&rdquo;</blockquote>
+          <p class="q-cap">On communitas &middot; from this session</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLOSE ===== -->
+  <section class="sp-close">
+    <p class="eyebrow">Get in Touch</p>
+    <h2>If this is how you think about the <em>education hour,</em> let's chat.</h2>
+    <a class="contact-btn" href="mailto:hello@resonanceco.co">Start a conversation &rarr;</a>
+  </section>
+
+</div>
+
+<footer class="site-footer"><div class="fwm">RESONANCE <span>Co.</span></div><div class="ftag">Event Education &amp; Strategy</div><div class="socials"><a href="https://www.instagram.com/resonancecoevents" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@resonancecoevents" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2 1.6 3.5 3.5 3.8v2.4c-1.3 0-2.5-.4-3.5-1.1v6.4a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.5a3.1 3.1 0 1 0 2.2 3V3h2.6z"/></svg></a></div><div class="flegal">&copy; 2026 Resonance Co. All rights reserved.</div></footer>
+</body>
+</html>
